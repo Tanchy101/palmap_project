@@ -4,14 +4,23 @@ import './Home.css';
 import {Link, Outlet} from 'react-router-dom';
 
 
-const InputEme = (props) => {
+
+const InputStudID = (props) => {
     return (
         <>
-        <div className="text-label"><label>{props.label}</label>
+        <div className= "text-label"> <label>{props.label}</label> </div>
         <br></br>
-        <input type = "number" >{props.Input}</input>
-        </div>
-        
+        <input type = "number" placeholder ="Enter User ID" >{props.Input}</input>
+        </>
+    )
+}
+
+const InputPass = (props) => {
+    return (
+        <>
+        <div className= "text-label"> <label>{props.label}</label> </div>
+        <br></br>
+        <input type = "password" placeholder = "Enter Password">{props.Input}</input>
         </>
     )
 }
@@ -28,9 +37,9 @@ const Home = () => {
             </div>
 
             <div className = "card">
-                <InputEme  label = {'User ID'}  />
+                <InputStudID  label = {'User ID'}  />
                 <br></br>
-                <InputEme label = {'Password'} />
+                <InputPass label = {'Password'} />
                 <br></br><br></br>
                 <ButtonLogin /> 
                 <p>or</p>
