@@ -38,6 +38,7 @@ input{
     height: 2.5em;
     border-radius: 10px;
     font-family: Poppins;
+    text-indent: 15px;
 }
 
 input::-webkit-outer-spin-button,
