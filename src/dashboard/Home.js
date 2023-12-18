@@ -7,9 +7,11 @@ import {Link, Outlet} from 'react-router-dom';
 const InputEme = (props) => {
     return (
         <>
-        <label>{props.label}</label>
+        <div className="text-label"><label>{props.label}</label>
         <br></br>
         <input type = "number" >{props.Input}</input>
+        </div>
+        
         </>
     )
 }
@@ -22,17 +24,17 @@ const Home = () => {
         <>
         <div className = "container">
             <div className = "header">
-                <h1 className = "login-title">Login</h1>
+                <h1 className = "login-title">Log In</h1>
             </div>
 
             <div className = "card">
-                <InputEme label = {'User ID'}/>
+                <InputEme  label = {'User ID'}  />
                 <br></br>
                 <InputEme label = {'Password'} />
                 <br></br><br></br>
                 <ButtonLogin /> 
                 <p>or</p>
-                <Link to ="/guest" className = "signup-link"><LoginAsGuest /></Link>
+                <Link to ="/guest" className = "guest-link"><LoginAsGuest /></Link>
                 <p>New User ? <Link to ="/signup" className = "signup-link">Sign Up</Link></p>
             </div>
         </div>

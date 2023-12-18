@@ -1,6 +1,6 @@
 const LoginAsGuest = () => {
     return (
-        <button className="login">Login As Guest</button>
+        <button className="lguest">Login As Guest</button>
     )
 }
 
