@@ -1,0 +1,31 @@
+.htmlsignup{
+    background-image: url('C:\xampp\htdocs\palmap_project\public\LogIn&SignUpBG.png');
+    background-size: cover;
+}
+
+.containersignup{
+    margin-top: 15rem;
+    max-width: 80%;
+    background-color: maroon;
+    border-radius: 15px;
+}
+  
+.signup-title{
+    color: #ffd700;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.card{
+    text-align: center;
+    color: white;
+}
+
+.login-link{
+    color:#ffd700;
+    text-decoration: none;
+}
+
+
