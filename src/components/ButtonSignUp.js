@@ -1,6 +1,6 @@
 const ButtonSignUp = () => {
     return (
-        <button style={{}}> Register </button>
+        <button className = "register" style={{}}> Register </button>
     )
 }
 

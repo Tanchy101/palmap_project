@@ -31,25 +31,28 @@ const Home = () => {
     
     return (
         <>
-        <div className = "container">
-            <div className = "header">
-                <h1 className = "login-title">Log In</h1>
-            </div>
+        <html className='htmllogin'>
+            <div className = "container">
+                <div className = "header">
+                    <h1 className = "login-title">Log In</h1>
+                </div>
 
-            <div className = "card">
-                <InputStudID  label = {'User ID'}  />
-                <br></br>
-                <InputPass label = {'Password'} />
-                <br></br><br></br>
-                <ButtonLogin /> 
-                <p>or</p>
-                <Link to ="/guest" className = "guest-link"><LoginAsGuest /></Link>
-                <p>New User ? <Link to ="/signup" className = "signup-link">Sign Up</Link></p>
+                <div className = "card">
+                    <InputStudID  label = {'User ID'}  />
+                    <br></br><br></br>
+                    <InputPass label = {'Password'} />
+                    <br></br><br></br>
+                    <ButtonLogin /> 
+                    <p>or</p>
+                    <Link to ="/guest" className = "guest-link"><LoginAsGuest /></Link>
+                    <p>New User ? <Link to ="/signup" className = "signup-link">Sign Up</Link></p>
+                </div>
             </div>
-        </div>
-        <main>
-            <Outlet />
-        </main>
+            </html>
+            <main>
+                <Outlet />
+            </main>
+        
         </>
        
     )

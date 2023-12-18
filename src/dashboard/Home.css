@@ -1,16 +1,23 @@
-
+.htmllogin{
+    background-image: url('/public/LoginSignupBG.gif');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    background-position: center center;
+}
 .container { /**container**/
     display: flex;
     flex-direction: column;
     font-family: 'Poppins';
-    background-color: #800000;
+    background-color: rgba(128,0,0, 0.8);
     padding: 1em;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 6em;
+    margin-top: 8em;
     margin-bottom: 2em;
     border-radius: 25px;
     width: 70%;
+    max-height: 55vh;
 
 }    
 .login-title { 
@@ -20,29 +27,30 @@
     font-weight: 800;
     margin-bottom: 0em;
 }
-.card {
+.card { /*declared for sign-up*/
     justify-content: left; 
     padding: 15px;
     color: rgb(136, 130, 44);
     font-size: 15px;   
 }
-.text-label{
+.text-label{ /*declared for sign-up*/
     text-align: left;
     justify-content: center;
     color: white;
-    margin-bottom: -1rem;
-    margin-top: 1rem;
+    margin-bottom: -1.5rem;
+    font-weight: 500;
 }
-input{
+input{ /*declared for sign-up*/
     width: 100%;
     height: 2.5em;
     border-radius: 10px;
     font-family: Poppins;
     text-indent: 15px;
+    margin-bottom: -1em;
 }
 
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+input::-webkit-inner-spin-button { /*declared for sign-up*/
   -webkit-appearance: none;
   margin: 0;
 }
@@ -59,6 +67,7 @@ input::-webkit-inner-spin-button {
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0.5em;
     border-radius: 8px;
     width: 11em;
     background-color: #FFD700;
@@ -66,7 +75,11 @@ input::-webkit-inner-spin-button {
     border: 0;
     cursor: pointer;
     color: black;
+    transition-duration: 0.4s;
 } 
+.login:hover{
+    background-color: rgb(255, 187, 0);
+}
 .lguest{
     text-align: center;
     display: flex;
@@ -79,6 +92,7 @@ input::-webkit-inner-spin-button {
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    margin-top: -0.5em;
     border-radius: 8px;
     width: 11em;
     background-color: #ADD8E6;
@@ -86,6 +100,10 @@ input::-webkit-inner-spin-button {
     border: 0;
     cursor: pointer;
     color: black;
+    transition-duration: 0.4s;
+}
+.lguest:hover{
+    background-color: #48d1ff;
 }
 .guest-link{
     text-decoration: none;
@@ -93,4 +111,9 @@ input::-webkit-inner-spin-button {
 
 .signup-link {
     color: #FFD700;
+}
+p { /*declared for sign-up*/
+    text-align: center;
+    color: white;
+    margin-top: 0.5rem;
 }
