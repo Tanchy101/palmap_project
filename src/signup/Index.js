@@ -32,14 +32,18 @@ const SignUp = () => {
                 </div>
 
             <div className='card'>
-                <InputUID label={'User ID'}/>
+                <InputUID label={'User ID'}/> 
+                <br></br>
                 <br></br>
                 <InputPW label={'Create Password'}/>
                 <br></br>
-                <InputPW label={'Confirm Password'}/>
+                <br></br>
+                <InputPW label={'Confirm Password'} />
+                <br></br>
                 <br></br>
                 <ButtonSignUp />
                 <p>Already Signed?<Link to ="/login" className="login-link"> Log In</Link></p>
+                
             </div>
             </div> 
         </html>     
