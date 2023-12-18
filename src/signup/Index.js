@@ -1,6 +1,13 @@
 const Signup = () => {
     return (
-        <h1>SIGNUP SAMPLE DITO MO LAGAY CODE MO CJ</h1>
+        <html>
+            <div className='container'>
+                <div className='signup'>
+                    <h1>Signup Page</h1>
+                    <h1>hellow</h1>
+                </div>
+            </div>
+        </html>
     )
 }
 
