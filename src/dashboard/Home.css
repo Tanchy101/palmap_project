@@ -1,0 +1,15 @@
+.container {
+    background-color: #800000;
+    border-radius: 5%;
+    max-width: 80%;
+    text-align:center;
+    margin: auto;
+}
+
+.login-title {
+    color: #FFD700;
+}
+
+.signup-link {
+    color: #FFD700;
+}
