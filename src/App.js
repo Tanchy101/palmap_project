@@ -2,6 +2,7 @@ import './App.css';
 
 import Home from './dashboard/Home';
 import Signup from './signup/Index';
+import Info from './info/infoPage';
 
 import {
   createBrowserRouter,
@@ -15,6 +16,7 @@ const router =createBrowserRouter(
     <Route path = "/"  >
       <Route index element={<Home />}></Route>
       <Route path = "signup" element={<Signup />}></Route>
+      <Route path = "guest" element={<Info />}></Route>
     </Route>
   )
 )

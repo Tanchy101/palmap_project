@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+.container-info{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    background-color: #800000;
+    padding: 2.3rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    border-radius: 25px;
+    width: 60%;
+    color: white;
+    /*for fade in animation */
+    animation: conti 1s forwards;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-delay: 3000ms;
+    animation-duration: 700ms;
+    opacity: 0;
+}
+@keyframes conti {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+    
+.welcome {
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: -35.5rem;
+/*for slide up animation */
+    position: relative;
+    animation: welcome 5s forwards;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-delay: 3000ms;
+    animation-duration: 1800ms;
+}
+  @keyframes welcome {
+    0%   {left: 0px; top: 0rem;}
+    25%  {left: 0px; top: -15rem;}
+    50%  {left: 0px; top: -15rem;}
+    75%  {left: 0px; top: -15rem;}
+    100%  {left: 0px; top: -15rem;}
+}
+
+.start{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    width: 11em;
+    background-color: #FFD700;
+    padding: 8px;
+    border: 0;
+    cursor: pointer;
+    /*for fade in animation */
+    animation: conti 1s forwards;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-delay: 3000ms;
+    animation-duration: 700ms;
+    opacity: 0;
+}
+@keyframes conti {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    
+}

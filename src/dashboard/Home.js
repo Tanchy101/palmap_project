@@ -32,7 +32,7 @@ const Home = () => {
                 <br></br><br></br>
                 <ButtonLogin /> 
                 <p>or</p>
-                <LoginAsGuest />
+                <Link to ="/guest" className = "signup-link"><LoginAsGuest /></Link>
                 <p>New User ? <Link to ="/signup" className = "signup-link">Sign Up</Link></p>
             </div>
         </div>
