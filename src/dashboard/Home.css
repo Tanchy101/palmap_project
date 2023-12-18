@@ -3,13 +3,51 @@
     border-radius: 5%;
     max-width: 80%;
     text-align:center;
-    margin: auto;
+    border-bottom-left-radius: 20px; 
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    margin: 100px;
+    margin-left: 85px;
+    max-height: 35em;
+
 }
 
 .login-title {
     color: #FFD700;
+    padding-top: 13px;
 }
 
 .signup-link {
     color: #FFD700;
 }
+
+.card {
+    text-align:center; 
+    padding: 15px;
+    color: white;
+    font-size: 15px;   
+
+}
+
+.login{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    width: 11em;
+    background-color: #FFD700;
+    padding: 8px;
+    border: 0;
+    cursor: pointer;
+    color: black;
+}
+
