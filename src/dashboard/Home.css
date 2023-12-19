@@ -17,8 +17,7 @@
     margin-bottom: 2em;
     border-radius: 25px;
     width: 70%;
-    max-height: 55vh;
-
+    max-height: 57vh;
 }    
 .login-title { 
     color: #FFD700;
@@ -67,7 +66,7 @@ input::-webkit-inner-spin-button { /*declared for sign-up*/
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0.5em;
+    margin-top: -2em;
     border-radius: 8px;
     width: 11em;
     background-color: #FFD700;
@@ -94,13 +93,14 @@ input::-webkit-inner-spin-button { /*declared for sign-up*/
     margin-right: auto;
     margin-top: -0.5em;
     border-radius: 8px;
-    width: 11em;
+    width: 10em;
     background-color: #ADD8E6;
     padding: 8px;
     border: 0;
     cursor: pointer;
     color: black;
     transition-duration: 0.4s;
+    text-decoration: none;    
 }
 .lguest:hover{
     background-color: #48d1ff;
@@ -108,12 +108,34 @@ input::-webkit-inner-spin-button { /*declared for sign-up*/
 .guest-link{
     text-decoration: none;
 }
-
 .signup-link {
     color: #FFD700;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 4px;
+}
+.signup-link:hover {
+    text-decoration: underline;
 }
 p { /*declared for sign-up*/
     text-align: center;
+    justify-content: center;
+    display: flex;
     color: white;
     margin-top: 0.5rem;
+}
+.forgot-pass{
+    color: #ADD8E6;
+    font-weight: bold;
+    text-decoration: underline; 
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-top: -.4em;
+    margin-bottom: .4em;
+}
+.forgot-pass:hover{
+    color: #48d1ff;
+    font-weight: bold;
+    text-decoration: underline;
 }
