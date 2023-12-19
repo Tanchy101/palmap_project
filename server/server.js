@@ -20,6 +20,9 @@ const User = sequelize.define('User', {
   },
   password: {
     type: DataTypes.STRING,
+    validate: {
+        len: [6, 20],
+      },
   },
   email: {
     type: DataTypes.STRING,
@@ -42,8 +45,26 @@ app.use(bodyParser.json());
 // Routes
 app.post('/api/signup', async (req, res) => {
   try {
-    const { username, password } = req.body;
-    const user = await User.create({ username, password });
+    const { userId, password, confirmPassword, email } = req.body;
+    
+    if (!userId || !password || !confirmPassword || !email) {
+        return res.status(400).json({ error: 'All fields are required!' });
+    }
+  
+    if (password !== confirmPassword) {
+        return res.status(400).json({ error: 'Passwords do not match' });
+    }
+
+    const existingUser = await User.findOne({ where: { student_id: userId } });
+    if (existingUser) {
+        return res.status(400).json({ error: 'User ID already exists' });
+    }
+    const existingEmail = await User.findOne({ where: { email } });
+    if (existingEmail) {
+        return res.status(400).json({ error: 'Email already exists' });
+    }
+
+    const user = await User.create({ student_id: userId, password, email });
     res.json(user);
   } catch (error) {
     console.error('Error creating user:', error);
