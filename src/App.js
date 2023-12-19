@@ -3,6 +3,8 @@ import './App.css';
 import Home from './dashboard/Home';
 import Signup from './signup/Index';
 import Info from './info/infoPage';
+import Map from './map/map';
+
 
 import {
   createBrowserRouter,
@@ -10,6 +12,8 @@ import {
   createRoutesFromElements,
   RouterProvider
 } from 'react-router-dom';
+
+
 
 const router =createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +23,7 @@ const router =createBrowserRouter(
       <Route path = "login" element={<Home />}></Route>
       <Route path = "guest" element={<Info />}></Route>
       <Route path = "forgotpass" element={<Info />}></Route>
+      <Route path = "map" element={<Map />}></Route>
     </Route>
   )
 )

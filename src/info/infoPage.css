@@ -76,6 +76,8 @@
     padding: 8px;
     border: 0;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
     /*for fade in animation */
     animation: conti 1s forwards;
     animation-direction: normal;
