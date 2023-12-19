@@ -40,18 +40,20 @@ const Home = () => {
                 <div className = "card">
                     <InputStudID  label = {'User ID'}  />
                     <br></br><br></br>
-                    <InputPass label = {'Password'} />
+                    <InputPass label = {'Password'}  />
                     <br></br><br></br>
+                    <p><Link to ="/forgotpass" className = "forgot-pass"> Forgot Password</Link></p>
+                    <br></br>
                     <ButtonLogin /> 
                     <p>or</p>
-                    <Link to ="/guest" className = "guest-link"><LoginAsGuest /></Link>
-                    <p>New User ? <Link to ="/signup" className = "signup-link">Sign Up</Link></p>
+                    <LoginAsGuest />
+                    <p>New User?<Link to ="/signup" className = "signup-link">Sign Up</Link></p>
                 </div>
             </div>
-            </html>
-            <main>
-                <Outlet />
-            </main>
+        </html>
+         <main>
+            <Outlet />
+        </main>
         
         </>
        

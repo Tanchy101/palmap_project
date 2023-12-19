@@ -1,6 +1,9 @@
+import {Link} from 'react-router-dom';
+
 const LoginAsGuest = () => {
     return (
-        <button className="lguest">Login As Guest</button>
+        <Link to ={"/guest"} className = "lguest">Login as Guest</Link> 
+        
     )
 }
 
