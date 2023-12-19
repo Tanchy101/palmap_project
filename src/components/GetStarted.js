@@ -1,6 +1,8 @@
+import {Link} from 'react-router-dom';
+
 const GetStarted = () => {
     return (
-        <button className="start"> Get Started</button>
+        <Link to ={"/map"} className = "lguest">Get Started</Link>
     )
 }
 
