@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { Sequelize, DataTypes } = require('sequelize');
 
+
 // Set up Express
 const app = express();
 const port = 5000;
@@ -42,7 +43,7 @@ sequelize.sync()
 // Middleware
 app.use(bodyParser.json());
 
-// Routes
+// Route for Signup
 app.post('/api/signup', async (req, res) => {
   try {
     const { userId, password, confirmPassword, email } = req.body;
@@ -69,6 +70,22 @@ app.post('/api/signup', async (req, res) => {
   } catch (error) {
     console.error('Error creating user:', error);
     res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+//Route for Login
+app.post('/api/login', async (req, res) => {
+  try {
+    const{ userId, password } = req.body;
+
+    const user = await User.findOne({where: { student_id: userId}});
+
+    const passwordMatch =  (password == user.password);
+  
+    res.json({success: true});
+  } catch (error) {
+  console.error('Error during login:', error);
+  res.status(500).json({error: 'Internal Server Error'});
   }
 });
 

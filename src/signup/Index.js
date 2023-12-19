@@ -4,12 +4,13 @@ import axios from 'axios';
 import { useState } from 'react';
 
 
+
 const InputUID = (props) => {
     return (
         <>
         <label>{props.label}
         <br></br>
-        <input autocomplete = "on" type = "number" placeholder = "Enter User ID" onChange={props.onChange} >{props.Input}</input>
+        <input autoComplete = "on" type = "number" placeholder = "Enter User ID" onChange={props.onChange} >{props.Input}</input>
         </label>
         </>
     )
@@ -20,7 +21,7 @@ const InputEmail = (props) => {
         <>
         <label>{props.label}
         <br></br>
-        <input  autocomplete = "on" type = "email" placeholder = "Enter Email" onChange={props.onChange}>{props.Input}</input>
+        <input  autoComplete = "on" type = "email" placeholder = "Enter Email" onChange={props.onChange}>{props.Input}</input>
         </label>
         </>
     )
@@ -64,6 +65,11 @@ const SignUp = () => {
             confirmPassword,
           });
           console.log('User created:', response.data);
+          setUserId('')
+          setEmail('')
+          setPassword('')
+          setConfirmPassword('')
+          
           setError('');
         } catch (error) {
             setError(error.response.data.error ?? error.message);
