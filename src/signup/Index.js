@@ -7,7 +7,17 @@ const InputUID = (props) => {
         <>
         <label>{props.label}</label>
         <br></br>
-        <input type = "number" >{props.Input}</input>
+        <input type = "number" placeholder = "Enter User ID">{props.Input}</input>
+        </>
+    )
+}
+
+const InputEmail = (props) => {
+    return (
+        <>
+        <label>{props.label}</label>
+        <br></br>
+        <input type = "email" placeholder = "Enter Email">{props.Input}</input>
         </>
     )
 }
@@ -17,10 +27,22 @@ const InputPW = (props) => {
         <>
         <label>{props.label}</label>
         <br></br>
-        <input type = "password" >{props.Input}</input>
+        <input type = "password" placeholder = "Enter Password" >{props.Input}</input>
         </>
     )
 }
+
+const InputConPW = (props) => {
+    return (
+        <>
+        <label>{props.label}</label>
+        <br></br>
+        <input type = "password" placeholder = "Confirm Password" >{props.Input}</input>
+        </>
+    )
+}
+
+
 
 const SignUp = () => {
     return (
@@ -35,10 +57,13 @@ const SignUp = () => {
                 <InputUID label={'User ID'}/> 
                 <br></br>
                 <br></br>
+                <InputEmail label={'Email'}/> 
+                <br></br>
+                <br></br>
                 <InputPW label={'Create Password'}/>
                 <br></br>
                 <br></br>
-                <InputPW label={'Confirm Password'} />
+                <InputConPW label={'Confirm Password'} />
                 <br></br>
                 <br></br>
                 <ButtonSignUp />
