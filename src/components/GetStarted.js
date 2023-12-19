@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom';
 
 const GetStarted = () => {
     return (
-        <Link to ={"/map"} className = "lguest">Get Started</Link>
+        <Link to ={"/map"} className = "start">Get Started</Link>
     )
 }
 
