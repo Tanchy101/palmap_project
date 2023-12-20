@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+.palmap-about {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 3rem;
+    margin-bottom: 1.4rem;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    padding-top: .4em;
+    padding-bottom: .4em;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.palmap-desc {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins';
+    font-size: 17px;
+    margin-bottom: 1rem;
+    padding-top: .4em;
+    padding-bottom: .4em;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-about{
+    background-image: url('/public/plm-about.png');
+    background-size: cover;
+    height: 5em;
+    display: flex;
+    background-position: center center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-weight: bold;
+    padding: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    color: black;
+}
+
+h3{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+h4{
+    display: flex;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: -.5em;
+}
+
+.pics{
+    background-color: maroon;
+    height: 100%;
+    display: inline-block;
+    background-position: center center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.peeps{
+    margin-left: 50px;
+}
+img{
+    margin-top: 2em;
+    margin-bottom: -2.5em;
+}
+h5{
+    font-size: 20px;
+    color: black;
+    background-color: #ececec;
+    padding: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 11.8em;
+    margin-left: auto;
+    margin-right: auto;
+}
+h6{
+    font-size: 20px;
+    color: black;
+    background-color: #ececec;
+    padding: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 11.8em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -1.7em;
+}
+i{
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor:pointer;
+}
+@media only screen and (max-width:768px) {
+    .pics{
+        background-color: maroon;
+        height: 100%;
+        display: inline-block;
+        background-position: center center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: 'Poppins';
+        font-weight: bold;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    .peeps{
+        margin-left: 0px;
+        margin-top: -30px;
+    }
+    h5{
+        font-size: 20px;
+        color: black;
+        background-color: #ececec;
+        padding: 4px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        width: 11.8em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+

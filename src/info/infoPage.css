@@ -91,3 +91,25 @@
     100% { opacity: 1; }
     
 }
+.aboutUs{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    width: 11em;
+    background-color: #ff0000;
+    padding: 8px;
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    margin-top: 10em;
+}
