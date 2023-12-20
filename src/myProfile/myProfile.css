@@ -1,0 +1,31 @@
+.htmlmyprofile{
+    background-image: url('C:\Users\Jenie O. Tadena\OneDrive\Documents\palmap\palmap_project\src\myProfile\plmimage.png');
+    height: 40vh;
+    display: flex;
+    background-position: center center;
+}
+
+.containerProfile{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Poppins';
+    padding: 0em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8em;
+    margin-bottom: 2em;
+    border-radius: 25px;
+    width: 25%;
+    max-height: 63vh;
+}
+
+
+.myProfile-title{
+    color: Black;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 750;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+

@@ -4,6 +4,7 @@ import Home from './dashboard/Home';
 import Signup from './signup/Index';
 import Info from './info/infoPage';
 import Map from './map/map';
+import Profile from './myProfile/myProfile';
 
 
 import {
@@ -24,6 +25,7 @@ const router =createBrowserRouter(
       <Route path = "guest" element={<Info />}></Route>
       <Route path = "forgotpass" element={<Info />}></Route>
       <Route path = "map" element={<Map />}></Route>
+      <Route path = "myProfile" element={<Profile />}></Route> 
     </Route>
   )
 )

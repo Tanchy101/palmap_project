@@ -125,7 +125,7 @@ p { /*declared for sign-up*/
     margin-top: 0.5rem;
 }
 .forgot-pass{
-    color: #ADD8E6;
+    color: #f9e9dc;
     font-weight: bold;
     text-decoration: underline; 
     text-align: center;
@@ -135,7 +135,7 @@ p { /*declared for sign-up*/
     margin-bottom: .4em;
 }
 .forgot-pass:hover{
-    color: #48d1ff;
+    color: #ada299;
     font-weight: bold;
     text-decoration: underline;
 }
