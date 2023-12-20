@@ -36,9 +36,15 @@ export default function App() {
   return (
     <>
 
-    <DropMenu />
+        <div className="cntr-drpmn">
+          <div>
+            <DropMenu />
+          </div>
+        </div>
 
-    <MapContainer className="root" center={[14.586913896882493, 120.97629829313871]} minZoom={16} zoom={18} dragging={false } scrollWheelZoom={'center'}>
+    <MapContainer className="root" center={[14.586913896882493, 120.97629829313871]} minZoom={16} zoom={18} 
+    dragging={false} scrollWheelZoom={'center'} zoomControl={false} attributionControl={false}>
+
       {/* OPEN STREEN MAPS TILES */}
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/way/267200093">OpenStreetMap</a> contributors'
