@@ -1,0 +1,14 @@
+.plmpbtn:hover{
+    background-color: aquamarine;
+}
+
+.plmpbtn{
+    position: relative;
+    font-weight: 900;
+    font-size: large;
+    color: #FFEF5F;
+    width: 25%;
+    height: 50px;
+    background-color: white;
+    border-radius: 20px;
+}

@@ -2,6 +2,7 @@ import "./map.css";
 import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
+import DropMenu from './dropmenu'
 
 import { Icon, divIcon, point } from "leaflet";
 
@@ -33,6 +34,10 @@ const markers = [
 
 export default function App() {
   return (
+    <>
+
+    <DropMenu />
+
     <MapContainer className="root" center={[14.586913896882493, 120.97629829313871]} minZoom={16} zoom={18} dragging={false } scrollWheelZoom={'center'}>
       {/* OPEN STREEN MAPS TILES */}
       <TileLayer
@@ -79,5 +84,6 @@ export default function App() {
        */}
       </MarkerClusterGroup>
     </MapContainer>
+    </>
   );
 }
