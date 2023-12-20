@@ -60,7 +60,7 @@ const InputOpass = (props) => {
         <>
         <label>{props.label}</label>
         <br></br>
-        <input className="input-oldPass" type = "number" placeholder = "Old Password" >{props.Input}</input>
+        <input className="input-oldPass" type = "password" placeholder = "Old Password" >{props.Input}</input>
         </>
     )
 }
@@ -70,7 +70,7 @@ const InputNpass = (props) => {
         <>
         <label>{props.label}</label>
         <br></br>
-        <input className="input-newPass" type = "number" placeholder = "New Password" >{props.Input}</input>
+        <input className="input-newPass" type = "password" placeholder = "New Password" >{props.Input}</input>
         </>
     )
 }
@@ -80,7 +80,7 @@ const InputCpass = (props) => {
         <>
         <label>{props.label}</label>
         <br></br>
-        <input className="input-conPass" type = "number" placeholder = "Confirm Password" >{props.Input}</input>
+        <input className="input-conPass" type = "password" placeholder = "Confirm Password" >{props.Input}</input>
         </>
     )
 }
