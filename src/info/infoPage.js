@@ -1,6 +1,5 @@
 import Typed from 'react-typed'; 
 import GetStarted from '../components/GetStarted';
-import AboutUs from '../components/AboutUs';
 import './infoPage.css';
 
 const infoPage = () =>  {
@@ -21,7 +20,6 @@ const infoPage = () =>  {
             familiarize themselves with some of the university's buildings, laboratories, and offices.</p>
         </div>
         <GetStarted />
-        <AboutUs />
     </div>
     </>
   );
