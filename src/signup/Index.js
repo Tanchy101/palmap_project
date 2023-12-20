@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 
 
+
 const InputUID = (props) => {
     return (
         <>
@@ -51,7 +52,11 @@ const SignUp = () => {
             setError('All fields are required!!');
             return;
           }
-        
+        if (password < 6){
+            setError('Your password is too short');
+            return;
+        }
+
         if (password !== confirmPassword) {
         setError('Passwords do not match');
         return;
@@ -65,11 +70,11 @@ const SignUp = () => {
             confirmPassword,
           });
           console.log('User created:', response.data);
-          setUserId('')
-          setEmail('')
-          setPassword('')
-          setConfirmPassword('')
-          
+        //   setUserId('')
+        //   setEmail('')
+        //   setPassword('')
+        //   setConfirmPassword('')
+          window.location.href = "/info"
           setError('');
         } catch (error) {
             setError(error.response.data.error ?? error.message);

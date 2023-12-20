@@ -51,10 +51,6 @@ app.post('/api/signup', async (req, res) => {
     if (!userId || !password || !confirmPassword || !email) {
         return res.status(400).json({ error: 'All fields are required!' });
     }
-  
-    if (password !== confirmPassword) {
-        return res.status(400).json({ error: 'Passwords do not match' });
-    }
 
     const existingUser = await User.findOne({ where: { student_id: userId } });
     if (existingUser) {
@@ -85,7 +81,7 @@ app.post('/api/login', async (req, res) => {
     res.json({success: true});
   } catch (error) {
   console.error('Error during login:', error);
-  res.status(500).json({error: 'Internal Server Error'});
+  res.status(500).json({error: 'Account does not exist bich'});
   }
 });
 

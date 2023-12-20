@@ -6,7 +6,6 @@ import React from 'react';
 import axios from 'axios';
 
 
-
 const InputStudID = (props) => {
     return (
         <>
@@ -41,7 +40,6 @@ const Home = () => {
                 setError('Both user ID and password are required!');
                 return;
             }
-
             try {
                 const response = await axios.post('/api/login', {
                     userId,
