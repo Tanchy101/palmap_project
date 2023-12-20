@@ -38,6 +38,7 @@ function App() {
     //   {/* <Home /> */}
     // </div>
     <RouterProvider router={router} />
+
   );
 }
 

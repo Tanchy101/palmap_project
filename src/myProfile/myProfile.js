@@ -22,7 +22,7 @@ const InputLname = (props) => {
     )
 }
 
-const InputStudnum = (props) => {
+const InputStunum = (props) => {
     return (
         <>
         <label>{props.label}</label>
@@ -42,7 +42,7 @@ const InputCollege = (props) => {
     )
 }
 
-const Inputmail = (props) => {
+const InputEmail = (props) => {
     return (
         <>
         <label>{props.label}</label>
@@ -51,6 +51,7 @@ const Inputmail = (props) => {
         </>
     )
 }
+
 
 const InputOpass = (props) => {
     return (
@@ -77,7 +78,7 @@ const InputCpass = (props) => {
         <>
         <label>{props.label}</label>
         <br></br>
-        <input type = "number" placeholder = "Enter Confirm Password" >{props.Input}</input>
+        <input type = "number" placeholder = "Confirm Password" >{props.Input}</input>
         </>
     )
 }
@@ -87,31 +88,58 @@ const Profile = () => {
     return (
        <>
        <html className='htmlmyProfile'>
-                <div className='containerProfile'>
-                    <div className='header'>
-                    <div className='myProfile-title'>My Profile</div>
-                    </div>
-    
- 
-                <h3>USER INFORMATION</h3>
-                    
-                
+                          
+                          <div className='myProfile-title'>My Profile</div>
+                         
+                            <h5 className='heading'>USER INFORMATION</h5>
+                         <div className='containerProfile'>
+                                <div className="info">
+                               <InputFname label={'First Name'}/>
+                                 </div>
+                                  <div className="info" >
+                               <InputLname label={'Last Name'}/> 
+                                   </div>
+                                </div>
 
-
-                <Link to ="/profile" className="profile-link"> Submit</Link>
-                <br></br>
-                <br></br>
+                         <div className='containerUserinfo'>  
+                                <div className="info">
+                               <InputStunum label={'Student Number'}/>
+                                  </div> 
+                                  <div className="info">
+                                <InputCollege label={'College'}/>
+                                </div>
+                              <br></br>
+                              </div>
+                              <div className="info-Email">
+                                <InputEmail label={'Email'}/>
+                                </div>
+                              
+                             <Link to ="/profile" className="profile-link"> Submit</Link>
+                        
+                            
+                     
                 
-                <h3>CHANGE PASSWORD</h3>
-                <InputOpass label={'First Name'}/> 
-                <br></br>
-                <InputNpass label={'Last Name'}/> 
-                <br></br>
-                <InputCpass label={'Student Number'}/>
-                <br></br>
-                <Link to ="/profile" className="profile-link"> Change Password</Link>
+                             <h5 className='heading'>CHANGE PASSWORD</h5>
+                         <div className='containerChangepass'>
+                                <div className="pass">
+                                <InputOpass label={'Enter Old Password'}/>
+                                   <br></br>
+                                     </div>
+
+                                <div className="pass">
+                                <InputNpass label={'Enter New Password'}/> 
+                                    <br></br>
+                                    </div>
+
+                                <div className="pass">
+                                <InputCpass label={'Confirm Password'}/>
+                                    <br></br>
+                                      </div>
+                                     </div>
+
+                              <Link to ="/profile" className="profile-link"> Change Password</Link>
             
-            </div>
+        
         </html>  
        </>
 
