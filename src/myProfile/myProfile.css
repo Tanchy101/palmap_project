@@ -1,28 +1,44 @@
 .htmlmyprofile{
-    background-image: url('');
+   
     height: 40vh;
     display: flex;
     background-position: center center;
+    
 }
+
+.background-container {
+    background: linear-gradient( rgba(128,0,0, 0.8), rgba(110, 12, 14)), url("C:\Users\Jenie O. Tadena\OneDrive\Documents\palmap\palmap_project\public\plmimage.png");
+    background-size: cover;
+    color: red; /* Text color */
+    height: 40vh; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-position: center center;
+    
+  }
 
 .containerProfile{
     display: flex;
     flex-direction: row;
     font-family: 'Poppins';
-    margin-top: 10em;
-    margin-left: auto;
+    padding: 1em;
+    margin-top: 8em;
+    margin-left: 56em;
     margin-right: auto;
     margin-bottom: -7em;
     border-radius: 25px;
     width: 20%;
     max-height: 63vh;
+    
 }
 
 .containerUserinfo{
     display: flex;
     flex-direction: row;
     font-family: 'Poppins';
-    margin-left: auto;
+    margin-left: 57em;
     margin-right: auto;
     margin-top: 8em;
     margin-bottom: 2em;
@@ -38,6 +54,8 @@
     font-family: 'Poppins';
     margin-top: 8em;
     margin-bottom: 9rem;
+    margin-left: 0em;
+    margin-right: auto;
     border-radius: 25px;
     width: 100%;
     max-height: 63vh;
@@ -48,7 +66,7 @@
     flex-direction: column;
     font-family: 'Poppins';
     margin-top: 3em;
-    margin-left: auto;
+    margin-left: 57em;
     margin-right: auto;
     margin-bottom: -7em;
     border-radius: 25px;
@@ -60,7 +78,6 @@
     display: flex;
     flex-direction: column;
     font-family: 'Poppins';
-    
     border-radius: 25px;
     width: 15%;
     max-height: 63vh;
@@ -81,10 +98,10 @@
     border-radius: 25px;
     color: Black;
     text-align: center;
-    font-size: 30px;
-    font-weight: 900;
+    font-size: 35px;
     margin-top: 40px;
     padding-top: 40px;
+  
 }
 
 
@@ -93,14 +110,11 @@
     font-family: 'Poppins';
     color: Black;
     font-size: 17px;
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 52.2em;
     margin-top: 8em;
     margin-bottom: -7rem;
-    border-radius: 25px;
-    width: 20%;
-    max-height: 63vh;
+    background-color: #ffffff;
+    
 }
 
 .profile-link{

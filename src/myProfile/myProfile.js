@@ -1,6 +1,19 @@
-import ButtonProfile from '../components/ButtonProfile';
+
 import './myProfile.css';
 import {Link} from 'react-router-dom';
+
+const containerStyle = {
+    background: 'linear-gradient(rgba(128,0,0, 0.8), rgba(110, 12, 14)), url("C:\Users\Jenie O. Tadena\OneDrive\Documents\palmap\palmap_project\public\plmimage.png")',
+    backgroundSize: 'cover',
+    color: 'red', // Text color
+    height: '40vh', // Adjust the height as needed
+    display: 'flex',
+    justifyContent: 'center',
+    aligncontent: 'center',
+    alignItems: 'center',
+  };
+
+
 
 const InputFname = (props) => {
     return (
@@ -83,14 +96,15 @@ const InputCpass = (props) => {
     )
 }
 
+  
 
 const Profile = () => {
     return (
        <>
        <html className='htmlmyProfile'>
-                          
+                     <div className='header' style={containerStyle}>
                           <div className='myProfile-title'>My Profile</div>
-                         
+                          </div>
                             <h5 className='heading'>USER INFORMATION</h5>
                          <div className='containerProfile'>
                                 <div className="info">
@@ -138,8 +152,7 @@ const Profile = () => {
                                      </div>
 
                               <Link to ="/profile" className="profile-link"> Change Password</Link>
-            
-        
+    
         </html>  
        </>
 
