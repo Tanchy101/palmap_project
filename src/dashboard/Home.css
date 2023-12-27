@@ -13,11 +13,11 @@
     padding: 1em;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 8em;
+    margin-top: 6em;
     margin-bottom: 2em;
     border-radius: 25px;
     width: 70%;
-    max-height: 63vh;
+    max-height: 70vh;
 }    
 .login-title { 
     color: #FFD700;
@@ -46,6 +46,8 @@ input{ /*declared for sign-up*/
     font-family: Poppins;
     text-indent: 15px;
     margin-bottom: -1em;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 input::-webkit-outer-spin-button,

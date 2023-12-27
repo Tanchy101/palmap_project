@@ -57,7 +57,7 @@ const Home = () => {
             <html className='htmllogin'>
                 <div className = "container">
                 {error && <p style={{ color: '#FF3131d' }}>{error}</p>}
-                    <div className = "header">
+                    <div className = "header-login">
                         <h1 className = "login-title">Log In</h1>
                     </div>
 

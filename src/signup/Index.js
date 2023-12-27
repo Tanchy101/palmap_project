@@ -87,7 +87,7 @@ const SignUp = () => {
         <html className='htmlsignup'>
             <div className='containersignup'>
             {error && <p style={{color: '#FF3131'}}>{error}</p>}
-                <div className='header'>
+                <div className='header-signup'>
                     <div className='signup-title'>Sign Up</div>
                 </div>
             
