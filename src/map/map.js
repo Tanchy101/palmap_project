@@ -1,10 +1,10 @@
 import "./map.css";
 import "leaflet/dist/leaflet.css";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup} from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
-import DropMenu from './dropmenu'
-
-import { Icon, divIcon, point } from "leaflet";
+import DropMenu from './dropmenu';
+import {Link} from 'react-router-dom';
+import { Icon, divIcon, point} from "leaflet";
 
 // create custom icon
 const customIcon = new Icon({
@@ -24,11 +24,16 @@ const createClusterCustomIcon = function (cluster) {
 
 // markers
 const markers = [
+  
   {
     geocode: [14.58659828398265, 120.9776390651194],
     //14.58659828398265, 120.9776390651194
-    popUp: "--"
+    popup1: 'gazebo 1'
   },
+  {
+    geocode: [14.58659828398265, 120.977],
+    popup2: 'gazebo 2s'
+  }
 ];
 
 
@@ -73,9 +78,13 @@ export default function App() {
         {/* Mapping through the markers */}
         {markers.map((marker) => (
           <Marker position={marker.geocode} icon={customIcon}>
-            <Popup>{marker.popUp}</Popup>
+            <Popup>
+              <Link to ={"/myProfile"}>{marker.popup1}</Link>
+            </Popup>
           </Marker>
         ))}
+        
+        
 
         {/* Hard coded markers */}
         {/* <Marker position={[51.505, -0.09]} icon={customIcon}>
