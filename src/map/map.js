@@ -69,7 +69,7 @@ export default function App() {
           </div>
         </div>
 
-    <MapContainer className="root" center={[14.586913896882493, 120.97629829313871]} minZoom={16} zoom={18} 
+    <MapContainer className="root" center={[14.58680,120.97649]} minZoom={18} zoom={19} 
     dragging={false} scrollWheelZoom={'center'} zoomControl={false} attributionControl={false}>
       
       <Polygon pathOptions={purpleOptions} positions={polygon} />
@@ -78,7 +78,7 @@ export default function App() {
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/way/267200093">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        //subdomains={["mt0", "mt1", "mt2", "mt3"]}
+        maxZoom={20}
       />
       {/* WATERCOLOR CUSTOM TILES */}
       {/* <TileLayer
