@@ -25,33 +25,32 @@ const multiPolygonCar = [
     ],
     [
         //Parking Space 4 {PLM Chapel[front]}
-       [14.58613,120.97620],//left
-       [14.58619,120.97630],//right
-       [14.58614,120.97634],//rightbelow
-       [14.58609,120.97623]//leftbelow
+        [14.58613,120.97620],//left
+        [14.58619,120.97630],//right
+        [14.58614,120.97634],//rightbelow
+        [14.58609,120.97623]//leftbelow
    ],
     [
         //Parking Space 5 {University Activity Center[LeftSide]}
-       [14.58684,120.97678],//left
-       [14.58684,120.97682],//right
-       [14.58676,120.97680],//rightbelow
-       [14.58676,120.97676]//leftbelow
+        [14.58684,120.97678],//left
+        [14.58684,120.97682],//right
+        [14.58676,120.97680],//rightbelow
+        [14.58676,120.97676]//leftbelow
     ],
     [
-        //Parking Space 5 {University Activity Center[LeftSide]}
+        //Parking Space 6 {University Activity Center[LeftSide]}
         [14.58670,120.97675],//left
         [14.58669,120.97679],//right
         [14.58660,120.97676],//rightbelow
         [14.58661,120.97672]//leftbelow
     ], 
     [
-        //Parking Space 5 {University Activity Center[LeftSide]}
+        //Parking Space 7 {PLM Propaganda[LeftSide]}
         [14.58639,120.97655],//left
         [14.58643,120.97665],//right
         [14.58637,120.97669],//rightbelow
         
     ],   
-
 
 ]
  
@@ -80,7 +79,7 @@ const multiPolygonMotor = [
         [14.58606,120.97617]
     ],
     [
-        //Parking Space 4 {RamonMagsaysayCenter[front]}
+        //Parking Space 4 {Ramon Magsaysay Center[front]}
         [14.58620,120.97608],
         [14.58626,120.97618],
         [14.58621,120.97621],
