@@ -1,8 +1,9 @@
 import "./map.css";
 import "leaflet/dist/leaflet.css";
-import { MapContainer, TileLayer, Marker, Popup, Polygon} from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup} from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
 import DropMenu from './dropmenu';
+import Parking from "../parking/parking";
 import {Link} from 'react-router-dom';
 import { Icon, divIcon, point} from "leaflet";
 
@@ -22,23 +23,6 @@ const createClusterCustomIcon = function (cluster) {
   });
 };
 
-//polygon
-const polygon = [
-  [
-    [14.58685,120.97683],
-    [14.58645,120.97675],
-    [14.58640,120.97695],
-    [14.58683,120.97703],
-  ],
-  [
-    [14.58626,120.97623],
-    [14.58609,120.97634],
-    [14.58625,120.97671],
-    [14.58648,120.97657],
-  ]
-]
-
-const purpleOptions = {color: 'orange'}
 
 // markers
 const marker1 = [
@@ -69,10 +53,10 @@ export default function App() {
           </div>
         </div>
 
-    <MapContainer className="root" center={[14.58680,120.97649]} minZoom={18} zoom={19} 
+    <MapContainer className="root" center={[14.58680,120.97649]} minZoom={19} zoom={19} 
     dragging={false} scrollWheelZoom={'center'} zoomControl={false} attributionControl={false}>
-      
-      <Polygon pathOptions={purpleOptions} positions={polygon} />
+
+      <Parking/>
 
       {/* OPEN STREEN MAPS TILES */}
       <TileLayer
