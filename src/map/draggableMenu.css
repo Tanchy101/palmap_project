@@ -1,0 +1,50 @@
+.handle {
+    border-radius: 1cap;
+    width: 20em;
+    height: 0.6em;
+    color: gray;
+    margin: auto;
+    margin-bottom: 1%;
+    background-color: #8A7C7C;
+}
+
+.bldg-search-bar {
+    text-align: center; 
+    
+    width: 78%;
+    padding: 0.5em;
+    margin: auto;
+    margin-top: 1em;
+    border-radius: 1em;
+}
+
+.bldg-name{
+    text-align: center; 
+    padding-top: 3em;
+}
+
+.bldg-button {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 1em;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  color: #3c4043;
+  height: 3em;
+  text-align: center;
+  width: 15em;
+  margin: auto;
+}
+.bldg-logo {
+  padding-right: 0.4em;
+  padding-top: 1em;
+  margin-bottom: -0.2em;
+}
+
+::placeholder {
+  text-align: center;
+}
+ 
+/* .bldg-container {
+  position: relative;
+} */

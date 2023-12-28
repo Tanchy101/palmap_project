@@ -3,6 +3,7 @@ import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer} from "react-leaflet";
 import DropMenu from './dropmenu';
 import Parking from "../parking/parking";
+import DragDiv from './draggableMenu';
 
 import Gazebo1Mark from "../gazebo-marker/gazebo1-mark";
 import Gazebo2Mark from "../gazebo-marker/gazebo2-mark";
@@ -66,7 +67,10 @@ export default function App() {
       <Gazebo18Mark/>
       <Gazebo19Mark/>
 
+      
     </MapContainer>
+    <DragDiv />
+    
     </>
   );
 }
