@@ -35,7 +35,7 @@ export default function App() {
         </div>
 
     <MapContainer className="root" center={[14.58680,120.97649]} minZoom={19} zoom={19} 
-    dragging={false} scrollWheelZoom={'center'} zoomControl={false} attributionControl={false}>
+    dragging={true} scrollWheelZoom={'center'} zoomControl={false} attributionControl={false}>
 
       <Parking/>
       
