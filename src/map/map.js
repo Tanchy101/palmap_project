@@ -1,47 +1,28 @@
 import "./map.css";
 import "leaflet/dist/leaflet.css";
-import { MapContainer, TileLayer, Marker, Popup} from "react-leaflet";
-import MarkerClusterGroup from "react-leaflet-cluster";
+import { MapContainer, TileLayer} from "react-leaflet";
 import DropMenu from './dropmenu';
 import Parking from "../parking/parking";
-import {Link} from 'react-router-dom';
-import { Icon, divIcon, point} from "leaflet";
 
-// create custom icon
-const customIcon = new Icon({
-  // iconUrl: "https://cdn-icons-png.flaticon.com/512/447/447031.png",
-  iconUrl: require("./icons/placeholder.png"),
-  iconSize: [38, 38] // size of the icon
-});
-
-// custom cluster icon
-const createClusterCustomIcon = function (cluster) {
-  return new divIcon({
-    html: `<span class="cluster-icon">${cluster.getChildCount()}</span>`,
-    className: "custom-marker-cluster",
-    iconSize: point(33, 33, true)
-  });
-};
-
-
-// markers
-const marker1 = [
-  
-  {
-    geocode: [14.58659828398265, 120.9776390651194],
-    //14.58659828398265, 120.9776390651194
-    popup1: 'gazebo 1'
-  }
-
-];
-  const marker2 =[
-  {
-    geocode: [14.58659828398265, 120.977],
-    popup2: 'gazebo 2s'
-  }
-];
-
-
+import Gazebo1Mark from "../gazebo-marker/gazebo1-mark";
+import Gazebo2Mark from "../gazebo-marker/gazebo2-mark";
+import Gazebo3Mark from "../gazebo-marker/gazebo3-mark";
+import Gazebo4Mark from "../gazebo-marker/gazebo4-mark";
+import Gazebo5Mark from "../gazebo-marker/gazebo5-mark";
+import Gazebo6Mark from "../gazebo-marker/gazebo6-mark";
+import Gazebo7Mark from "../gazebo-marker/gazebo7-mark";
+import Gazebo8Mark from "../gazebo-marker/gazebo8-mark";
+import Gazebo9Mark from "../gazebo-marker/gazebo9-mark";
+import Gazebo10Mark from "../gazebo-marker/gazebo10-mark";
+import Gazebo11Mark from "../gazebo-marker/gazebo11-mark";
+import Gazebo12Mark from "../gazebo-marker/gazebo12-mark";
+import Gazebo13Mark from "../gazebo-marker/gazebo13-mark";
+import Gazebo14Mark from "../gazebo-marker/gazebo14-mark";
+import Gazebo15Mark from "../gazebo-marker/gazebo15-mark";
+import Gazebo16Mark from "../gazebo-marker/gazebo16-mark";
+import Gazebo17Mark from "../gazebo-marker/gazebo17-mark";
+import Gazebo18Mark from "../gazebo-marker/gazebo18-mark";
+import Gazebo19Mark from "../gazebo-marker/gazebo19-mark";
 
 export default function App() {
   return (
@@ -57,6 +38,7 @@ export default function App() {
     dragging={false} scrollWheelZoom={'center'} zoomControl={false} attributionControl={false}>
 
       <Parking/>
+      
 
       {/* OPEN STREEN MAPS TILES */}
       <TileLayer
@@ -64,56 +46,26 @@ export default function App() {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         maxZoom={20}
       />
-      {/* WATERCOLOR CUSTOM TILES */}
-      {/* <TileLayer
-        attribution='Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg"
-      /> */}
-      {/* GOOGLE MAPS TILES */}
-      {/* <TileLayer
-        attribution="Google Maps"
-        // url="http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}" // regular
-        // url="http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}" // satellite
-        url="http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}" // terrain
-        maxZoom={20}
-        subdomains={["mt0", "mt1", "mt2", "mt3"]}
-      /> */}
-      
+      <Gazebo1Mark/>
+      <Gazebo2Mark/>
+      <Gazebo3Mark/>
+      <Gazebo4Mark/>
+      <Gazebo5Mark/>
+      <Gazebo6Mark/>
+      <Gazebo7Mark/>
+      <Gazebo8Mark/>
+      <Gazebo9Mark/>
+      <Gazebo10Mark/>
+      <Gazebo11Mark/>
+      <Gazebo12Mark/>
+      <Gazebo13Mark/>
+      <Gazebo14Mark/>
+      <Gazebo15Mark/>
+      <Gazebo16Mark/>
+      <Gazebo17Mark/>
+      <Gazebo18Mark/>
+      <Gazebo19Mark/>
 
-      <MarkerClusterGroup
-        chunkedLoading
-        iconCreateFunction={createClusterCustomIcon}
-      >
-        {/* Mapping through the markers */}
-        {marker1.map((marker) => (
-          <Marker position={marker.geocode} icon={customIcon}>
-            <Popup>
-              <Link to ={"/myProfile"}>{marker.popup1}</Link>
-            </Popup>
-          </Marker>
-        ))}
-        {marker2.map((marker) => (
-          <Marker position={marker.geocode} icon={customIcon}>
-            <Popup>
-              <Link to ={"/login"}>{marker.popup2}</Link>
-            </Popup>
-          </Marker>
-        ))}
-        
-        
-
-        {/* Hard coded markers */}
-        {/* <Marker position={[51.505, -0.09]} icon={customIcon}>
-          <Popup>This is popup 1</Popup>
-        </Marker>
-        <Marker position={[51.504, -0.1]} icon={customIcon}>
-          <Popup>This is popup 2</Popup>
-        </Marker>
-        <Marker position={[51.5, -0.09]} icon={customIcon}>
-          <Popup>This is popup 3</Popup>
-        </Marker>
-       */}
-      </MarkerClusterGroup>
     </MapContainer>
     </>
   );

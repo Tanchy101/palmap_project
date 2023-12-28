@@ -35,3 +35,12 @@
   position: absolute;
   width: 100%;
 }
+.gazebo-title{
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+}
+.gazebo-title:hover{
+  text-decoration: solid;
+  color: blue;
+}
