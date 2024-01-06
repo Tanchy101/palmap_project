@@ -29,7 +29,7 @@ const aboutUs = () =>  {
 
             <div className = "pics">
                 <div className="mel">
-                    <img src={mel}/>
+                    <img src={mel} alt=" "/>
                     <h5>Rimuel Canada</h5>
                     <h6><i><FaSquareXTwitter/></i>
                     <i><MdEmail /></i>
@@ -38,7 +38,7 @@ const aboutUs = () =>  {
                 </div>
 
                 <div className="peeps">
-                    <img src={cj}/>
+                    <img src={cj} alt=" "/>
                     <h5>CJ Defita</h5>
                     <h6><i><FaSquareXTwitter/></i>
                     <i><MdEmail /></i>
@@ -47,7 +47,7 @@ const aboutUs = () =>  {
                 </div>
 
                 <div className="peeps">
-                    <img src={gelo}/>
+                    <img src={gelo} alt=" "/>
                     <h5>Angelo Tancioco </h5>
                     <h6><i><FaSquareXTwitter/></i>
                     <i><MdEmail /></i>
@@ -56,7 +56,7 @@ const aboutUs = () =>  {
                 </div>
 
                 <div className="peeps">
-                    <img src={yanna}/>
+                    <img src={yanna} alt=" "/>
                     <h5>Julianna Miranda</h5>
                     <h6><i><FaSquareXTwitter/></i>
                     <i><MdEmail /></i>
@@ -66,7 +66,7 @@ const aboutUs = () =>  {
                 </div>
 
                 <div className="peeps">
-                    <img src={jenie}/>
+                    <img src={jenie} alt=" "/>
                     <h5>Jenie Tadena </h5>
                     <h6><i><FaSquareXTwitter/></i>
                     <i><MdEmail /></i>

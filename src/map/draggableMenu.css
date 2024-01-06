@@ -41,7 +41,7 @@
   margin-bottom: -0.2em;
 }
 
-::placeholder {
+.not-draggable::placeholder {
   text-align: center;
 }
  

@@ -1,5 +1,6 @@
 import "./map.css";
 import "leaflet/dist/leaflet.css";
+import { useLockBodyScroll } from "@uidotdev/usehooks";
 import { MapContainer, TileLayer} from "react-leaflet";
 import DropMenu from './dropmenu';
 import Parking from "../parking/parking";
@@ -25,9 +26,9 @@ import Gazebo17Mark from "../gazebo-marker/gazebo17-mark";
 import Gazebo18Mark from "../gazebo-marker/gazebo18-mark";
 
 export default function App() {
+  useLockBodyScroll();
   return (
     <>
-
         <div className="cntr-drpmn">
           <div>
             <DropMenu />

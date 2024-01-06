@@ -9,7 +9,7 @@ const InputFname = (props) => {
         <>
         <label>{props.label}</label>
         <br></br>
-        <input className="input-fName" type = "text" placeholder = "Name">{props.Input}</input>
+        <input className="input-fName" type = "text" placeholder = "First Name">{props.Input}</input>
         </>
     )
 }
