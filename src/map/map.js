@@ -23,7 +23,6 @@ import Gazebo15Mark from "../gazebo-marker/gazebo15-mark";
 import Gazebo16Mark from "../gazebo-marker/gazebo16-mark";
 import Gazebo17Mark from "../gazebo-marker/gazebo17-mark";
 import Gazebo18Mark from "../gazebo-marker/gazebo18-mark";
-import Gazebo19Mark from "../gazebo-marker/gazebo19-mark";
 
 export default function App() {
   return (
@@ -65,7 +64,6 @@ export default function App() {
       <Gazebo16Mark/>
       <Gazebo17Mark/>
       <Gazebo18Mark/>
-      <Gazebo19Mark/>
 
       
     </MapContainer>

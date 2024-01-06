@@ -24,7 +24,7 @@ const createClusterCustomIcon = function (cluster) {
   const marker16 = [
     
     {
-      geocode: [14.586979, 120.97585],
+      geocode: [14.58706, 120.97595],
       //14.58659828398265, 120.9776390651194
       popup16: 'Gazebo 16'
     }
