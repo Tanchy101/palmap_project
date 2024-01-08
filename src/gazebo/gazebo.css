@@ -5,3 +5,20 @@
     text-decoration: none;
     color: white;
 }
+
+.gazeboLabel {
+    color: "black";
+}
+
+body{
+    font-family: "Poppins";
+}
+
+.occupantsLogo {
+    padding: 6px;
+    margin-bottom: -15px;
+}
+
+.numberOfOccupants {
+    font-size: 35px;
+}
