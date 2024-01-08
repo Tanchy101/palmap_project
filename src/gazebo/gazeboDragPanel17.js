@@ -6,28 +6,28 @@ import { MdArrowForwardIos } from "react-icons/md";
 import { Switch } from "antd"
 import {Link} from 'react-router-dom';
 
-const GazeboPanel = () => {
+const GazeboPanel17 = () => {
       return (
         <div className="gazebo-container">
           <div className='upper-part'>
             <div>
-                <Link className="arrow-left-1">
+                <Link to={"/gazebo16"} className="arrow-left">
                   <div>
                     <MdArrowBackIos className="arrow-left-icon"/>
                   </div>
                 </Link>
               </div>
 
-              <div className="gazebo-label">Gazebo 1</div>
+              <div className="gazebo-label">Gazebo 17</div>
 
               <div>
-                <Link to={"/gazebo2"} className="arrow-right">
+                <Link to={"/gazebo18"} className="arrow-right">
                   <div>
                     <MdArrowForwardIos className="arrow-right-icon"/>
                   </div>
                 </Link>
               </div>
-
+              
           </div>
               <div className="gazebo-content">
                 <span className="numberOfOccupants"><MdPerson size={40} className="occupantsLogo"/> 2 </span>
@@ -42,4 +42,4 @@ const GazeboPanel = () => {
       )
 }
 
-export default GazeboPanel
+export default GazeboPanel17

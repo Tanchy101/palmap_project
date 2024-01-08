@@ -1,18 +1,12 @@
-import HomeButtonGazebo from './HomeButtonGazebo'
-import gazebo from './gazebo.css' 
+import GazeboInterface18 from './gazeboInterface18'
+
 
 const Gazebo18 = () =>  {
-    return (
-          <div className="container">
-              <HomeButtonGazebo/>
-              <h2>dito mo ilagay ang gazebo 18</h2>
-          </div>
-    );
-  }
-  
-  export default Gazebo18;
+  return (
+        <div  className="background-container" >
+            <GazeboInterface18 />
+        </div>
+  );
+}
 
-
-
-
-
+export default Gazebo18;

@@ -1,15 +1,67 @@
 .HomeBtnGazebo {
     font-family: 'Poppins';
     font-weight: bold;
-    font-size: 20px;
+    font-size: 22px;
     text-decoration: none;
     color: white;
+    flex-direction: row;
+    display: flex;
+    margin-top: 10px;
+}
+.HomeBtnGazebo:hover {
+    font-family: 'Poppins';
+    font-weight: bold;
+    text-decoration: none;
+    color: maroon;
+    flex-direction: row;
+    display: flex;
+    margin-top: 10px;
+}
+.house-icon {
+    margin-top: 4px;
+    margin-right: 5px;
+    margin-left: 9px;
+}
+.home-btn{
+    flex-direction: row;
+    display: flex;
 }
 
-.gazeboLabel {
-    color: "black";
+.arrow-left {
+    font-family: 'Poppins';
+    font-weight: bold;
+    text-decoration: none;
+    color: white; 
 }
-
+.arrow-left-icon {
+    margin-bottom: -.2em;
+    font-size: 30px;
+    margin-left: .2em;
+}
+.arrow-left-1 {
+    font-family: 'Poppins';
+    font-weight: bold;
+    text-decoration: none;
+    color: white; 
+    opacity:.6;
+}
+.arrow-right {
+    font-family: 'Poppins';
+    font-weight: bold;
+    text-decoration: none;
+    color: white; 
+}
+.arrow-right-icon {
+    margin-bottom: -.2em;
+    font-size: 30px;
+}
+.arrow-right-18 {
+    font-family: 'Poppins';
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    opacity: .6; 
+}
 body{
     font-family: "Poppins";
 }
@@ -20,5 +72,81 @@ body{
 }
 
 .numberOfOccupants {
-    font-size: 35px;
+    font-size: 30px;
+    margin-left:-.5em;
+}
+.toggle{
+    display: flex;
+    margin-left: 81%;
+    margin-top: .5em;
+}
+.gazebo-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.gazebo-label{
+    margin-top: 1px;
+    padding: 7px;
+    width: 90%;
+    background-color: white;
+    border-radius: 20px;
+    margin-left: .8em;
+    margin-right: 1em;
+    color: black;
+    font-family: Poppins;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.gazebo-container{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px 20px 0 0; 
+    background-color: #800000;
+    padding: 10px;
+    color: #fff;
+    width: 95%;
+    flex-direction: row;
+}
+.upper-part{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width:768px) {
+    .numberOfOccupants {
+        font-size: 30px;
+        margin-left:-.5em;
+    }
+    .toggle{
+        display: flex;
+        margin-left: 12em;
+        margin-top: .5em;
+    }
+    .gazebo-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .gazebo-label{
+        margin-top: 1px;
+        padding: 7px;
+        width: 19em;
+        background-color: white;
+        border-radius: 20px;
+        margin-left: .6em;
+        margin-right: 1em;
+        color: black;
+        font-family: Poppins;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
 }

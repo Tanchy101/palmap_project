@@ -1,11 +1,16 @@
 import {Link} from 'react-router-dom';
-import { MdOutlineArrowBackIos } from "react-icons/md";
+import { FaHouse } from "react-icons/fa6";
 
 const HomeButtonGazebo = () => {
    return(
     <>
+        <div className='home-btn'>
+            <Link to={"/map"} className="HomeBtnGazebo">
+            <div>
+                <FaHouse className="house-icon"/>
+            </div>Home</Link>
+        </div>
         
-        <span><MdOutlineArrowBackIos style={{color: "white"}}/><Link to={"/map"} className="HomeBtnGazebo">Home</Link></span>
     </>
     
     )
