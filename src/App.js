@@ -65,6 +65,7 @@ const router =createBrowserRouter(
       <Route path = "gazebo16" element={<Gazebo16 />}></Route>
       <Route path = "gazebo17" element={<Gazebo17 />}></Route>
       <Route path = "gazebo18" element={<Gazebo18 />}></Route>
+      
 
     </Route>
   )
