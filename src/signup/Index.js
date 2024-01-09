@@ -2,7 +2,7 @@ import './Index.css';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import { useState } from 'react';
-
+import Logo from './Logo.png';
 
 
 
@@ -84,7 +84,13 @@ const SignUp = () => {
     
     return (
         <>
+
+        
         <html className='htmlsignup'>
+            
+            <div>
+                <img style={{width:350,}} src={Logo} alt='Logo'></img>
+
             <div className='containersignup'>
             {error && <p style={{color: '#FF3131'}}>{error}</p>}
                 <div className='header-signup'>
@@ -107,7 +113,8 @@ const SignUp = () => {
                 <button className = "register" onClick={handleSignup}> Register </button>
                 <p>Already Signed?<Link to ="/login" className="login-link"> Log In</Link></p>
             </div>
-            </div> 
+            </div>
+            </div>
         </html>     
         </>
     )

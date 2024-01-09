@@ -18,7 +18,7 @@ const DragDiv = () => {
       
       const newY = position.y + ui.deltaY;
 
-      const snapTo = [-100, -300]
+      const snapTo = [-100, -230]
       const snappedY = snapTo.reduce((closest, snap) => {
         return Math.abs(newY - snap) < Math.abs(closest -snap) ? newY : closest;
       }, snapTo[0]);
@@ -61,7 +61,7 @@ const DragDiv = () => {
 
                   <FaBuilding className="bldg-logo"/> <button className='bldg-button'>Gusaling Bagatsing</button> <br></br> <br></br>
 
-                  <FaBuilding className="bldg-logo"/> <button className='bldg-button'>Gusaling Vilegas</button> 
+                  <FaBuilding className="bldg-logo"/> <button className='bldg-button'>Gusaling Villegas</button> 
                 </div>
                 </div>
                   

@@ -2,7 +2,6 @@
     background-image: url('/public/LoginSignupBG.gif');
     background-size: cover;
     height: 100vh;
-    display: flex;
     background-position: center center;
 }
 

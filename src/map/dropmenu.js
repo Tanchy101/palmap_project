@@ -12,9 +12,9 @@ function DropMenu(){
                 PaLMap
             </button>
 
-            {isOpen && <div>
+            {isOpen &&
                 <DropDown />
-            </div>}
+            }
 
         </div>
     )
