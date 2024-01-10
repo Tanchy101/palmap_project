@@ -2,6 +2,7 @@ import './gazebo.css'
 import backgroundImage from './GazeboBackgroundImage.jpg'
 import HomeButtonGazebo from './HomeButtonGazebo'
 import GazeboDragPanel14 from './gazeboDragPanel14'
+import PolygonWithTrapezoids from './gazeboHexagon'
 
 const GazeboInterface14 = () => {
     return(
@@ -16,6 +17,7 @@ const GazeboInterface14 = () => {
                 justifyContent: 'center',
                 color: 'white',
             }}> <HomeButtonGazebo />
+                <PolygonWithTrapezoids />
                 <GazeboDragPanel14 />
                 <h2>DITO YUNG MAY HEXAGON</h2>
             </div>

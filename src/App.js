@@ -26,6 +26,8 @@ import Gazebo16 from './gazebo/gazebo16';
 import Gazebo17 from './gazebo/gazebo17';
 import Gazebo18 from './gazebo/gazebo18';
 
+import Admin from './AdminPanel/AdminPanel';
+
 import {
   createBrowserRouter,
   Route,
@@ -65,6 +67,8 @@ const router =createBrowserRouter(
       <Route path = "gazebo16" element={<Gazebo16 />}></Route>
       <Route path = "gazebo17" element={<Gazebo17 />}></Route>
       <Route path = "gazebo18" element={<Gazebo18 />}></Route>
+
+      <Route path = "admin" element={<Admin />}></Route>
       
 
     </Route>
