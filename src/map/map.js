@@ -5,7 +5,6 @@ import { MapContainer, TileLayer} from "react-leaflet";
 import DropMenu from './dropmenu';
 import Parking from "../parking/parking";
 import DragDiv from './draggableMenu';
-
 import Gazebo1Mark from "../gazebo-marker/gazebo1-mark";
 import Gazebo2Mark from "../gazebo-marker/gazebo2-mark";
 import Gazebo3Mark from "../gazebo-marker/gazebo3-mark";
@@ -25,10 +24,12 @@ import Gazebo16Mark from "../gazebo-marker/gazebo16-mark";
 import Gazebo17Mark from "../gazebo-marker/gazebo17-mark";
 import Gazebo18Mark from "../gazebo-marker/gazebo18-mark";
 
+
 export default function App() {
   useLockBodyScroll();
   return (
     <>
+
         <div className="cntr-drpmn">
           <div>
             <DropMenu />
@@ -49,6 +50,7 @@ export default function App() {
         //url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" // ==> original tile
         maxZoom={20}
       />
+
       <Gazebo1Mark/>
       <Gazebo2Mark/>
       <Gazebo3Mark/>
@@ -68,9 +70,11 @@ export default function App() {
       <Gazebo17Mark/>
       <Gazebo18Mark/>
 
-      
     </MapContainer>
-    <DragDiv />
+    
+    <DragDiv/>
+
+      
     
     </>
   );

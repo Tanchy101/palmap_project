@@ -89,7 +89,7 @@ const SignUp = () => {
         <html className='htmlsignup'>
             
             <div>
-                <img style={{width:350,}} src={Logo} alt='Logo'></img>
+                <img className='logoSignup' src={Logo} alt='Logo'></img>
 
             <div className='containersignup'>
             {error && <p style={{color: '#FF3131'}}>{error}</p>}

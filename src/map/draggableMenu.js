@@ -3,6 +3,7 @@ import React from 'react';
 import './draggableMenu.css';
 import { FaBuilding } from "react-icons/fa";
 
+
 const SearchBar = (props) => {
   return (
       <input className='not-draggable' autoComplete = "on" type = "text" placeholder ="Where do you want to go?" style={{ border: 'none',}}>{props.Input}</input>
@@ -36,7 +37,7 @@ const DragDiv = () => {
 
    
     return (
-      <Draggable axis='y' position={position} onDrag={handleDrag} hanlde=".handle" cancel=".not-draggable" >
+      <Draggable axis='y' position={position} onDrag={handleDrag} handle=".handle" cancel=".not-draggable">
       
         <div>
             <div className="handle">...</div>
@@ -57,11 +58,11 @@ const DragDiv = () => {
                 <div className="bldg-search-bar"> <SearchBar /> </div>
                 <div >
                 <div className="bldg-name"> 
-                  <FaBuilding className="bldg-logo"/> <button className='bldg-button'> Gusaling Lacson </button> <br></br> <br></br>
+                  <FaBuilding className="bldg-logo"/> <a className='bldg-button' href='myProfile'> Gusaling Lacson </a> <br></br> <br></br>
 
-                  <FaBuilding className="bldg-logo"/> <button className='bldg-button'>Gusaling Bagatsing</button> <br></br> <br></br>
+                  <FaBuilding className="bldg-logo"/> <a className='bldg-button' href="myProfile">Gusaling Bagatsing</a> <br></br> <br></br>
 
-                  <FaBuilding className="bldg-logo"/> <button className='bldg-button'>Gusaling Villegas</button> 
+                  <FaBuilding className="bldg-logo"/> <a className='bldg-button' href='myProfile'>Gusaling Villegas</a> 
                 </div>
                 </div>
                   

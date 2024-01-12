@@ -9,8 +9,7 @@
 }
 
 .bldg-search-bar {
-    text-align: center; 
-    
+    text-align: center;
     width: 78%;
     padding: 0.5em;
     margin: auto;
@@ -31,9 +30,11 @@
   box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
   color: #3c4043;
   height: 3em;
+  font-size: medium;
   text-align: center;
-  width: 15em;
-  margin: auto;
+  
+  padding: 10px;
+  text-decoration: none;
 }
 .bldg-logo {
   padding-right: 0.4em;

@@ -4,6 +4,7 @@ import {Link, Outlet,} from 'react-router-dom';
 import {useState} from 'react';
 import React from 'react';
 import axios from 'axios';
+import Logo from './Logo.png';
 import {useNavigate} from 'react-router-dom'
 
 const InputStudID = (props) => {
@@ -34,6 +35,7 @@ const Home = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const navigateUser = useNavigate();
+
         const handleLogin = async () => {
 
     
@@ -48,7 +50,7 @@ const Home = () => {
                     });
                 console.log('Login successful:', response.data);
                 navigateUser("/map");
-                setError('');         
+                setError('');
             } catch (error) {
               setError(error.response.data.error);
             }
@@ -57,6 +59,10 @@ const Home = () => {
         return (
             <>
             <html className='htmllogin'>
+
+            <div>
+                <img className='logoLogin' src={Logo} alt='Logo'></img>
+
                 <div className = "container">
                 {error && <p style={{ color: '#FF3131d' }}>{error}</p>}
                     <div className = "header-login">
@@ -76,6 +82,7 @@ const Home = () => {
                         <p>New User?<Link to ="/signup" className = "signup-link">Sign Up</Link></p>
                     </div>
                 </div>
+            </div>
             </html>
                 <main>
                 <Outlet />
