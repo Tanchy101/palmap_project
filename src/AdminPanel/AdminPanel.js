@@ -5,9 +5,18 @@ const Profile = () => {
     return (
        <>
        <html className='html-admin'>
-            <div className="header-admin">
+        <div className="header-admin">
+           
+            <div className="title-admin">
+             ADMIN PANEL
+             </div>
+             <div className = "container">
+                </div>
+             <div>
             </div>
-        </html> 
+        </div>
+    </html> 
+       
        </>
 
     )

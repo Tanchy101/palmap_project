@@ -111,7 +111,7 @@ const Profile = () => {
                             <InputEmail label={'Email'}/>
                         </div>
 
-                        <Link to ={"/admin"} className = "submit-btn">Submit</Link>
+                        <Link to ={"/AdminPanel"} className = "submit-btn">Submit</Link>
                     
                     </div>
 
