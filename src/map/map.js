@@ -44,7 +44,8 @@ export default function App() {
       {/* OPEN STREEN MAPS TILES */}
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org">OpenStreetMap</a> contributors'
-        url="http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png"
+        url="https://tile.openstreetmap.de/{z}/{x}/{y}.png"
+        //url="http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png"
         //url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" // ==> original tile
         maxZoom={20}
       />

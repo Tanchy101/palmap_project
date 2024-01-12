@@ -1,10 +1,10 @@
 import LoginAsGuest from '../components/LoginAsGuest';
 import './Home.css';
-import {Link, Outlet} from 'react-router-dom';
+import {Link, Outlet,} from 'react-router-dom';
 import {useState} from 'react';
 import React from 'react';
 import axios from 'axios';
-
+import {useNavigate} from 'react-router-dom'
 
 const InputStudID = (props) => {
     return (
@@ -33,8 +33,9 @@ const Home = () => {
     const [userId, setUserId] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-
+    const navigateUser = useNavigate();
         const handleLogin = async () => {
+
     
             if(!userId || !password){
                 setError('Both user ID and password are required!');
@@ -46,7 +47,8 @@ const Home = () => {
                     password,
                     });
                 console.log('Login successful:', response.data);
-                setError('');
+                navigateUser("/map");
+                setError('');         
             } catch (error) {
               setError(error.response.data.error);
             }
