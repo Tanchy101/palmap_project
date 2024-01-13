@@ -49,8 +49,8 @@ const Home = () => {
                     password,
                     });
                 console.log('Login successful:', response.data);
-                navigateUser("/map");
                 setError('');
+                navigateUser("/map");
             } catch (error) {
               setError(error.response.data.error);
             }

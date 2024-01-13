@@ -28,11 +28,16 @@ const User = sequelize.define('User', {
   email: {
     type: DataTypes.STRING,
     unique: true,
+  },
+  user_type: {
+    type: DataTypes.STRING,
+    defaultValue: 'user',
   }
 });
+//add column to the db para ma agnas
 
 // Sync the model with the database
-sequelize.sync()
+sequelize.sync({ alter: true })
   .then(() => {
     console.log('Database and tables synced');
   })
@@ -76,12 +81,14 @@ app.post('/api/login', async (req, res) => {
 
     const user = await User.findOne({where: { student_id: userId}});
 
-    const passwordMatch =  (password == user.password);
+    if (password !== user.password) {
+      throw new Error;
+    }
   
     res.json({success: true});
   } catch (error) {
   console.error('Error during login:', error);
-  res.status(500).json({error: 'Account does not exist bich'});
+  res.status(500).json({error: 'Invalid Credentials'});
   }
 });
 
