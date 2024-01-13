@@ -1,0 +1,55 @@
+.legend{
+    z-index: 500;
+    display: flex;
+    justify-content: right;
+    position: relative;
+}
+.legend-icon{
+    align-items: right;
+}
+.legend-btn{
+    background-color: transparent;
+    display: flex;
+    position: absolute;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: .85em;
+    margin-right: .8em;
+    color: maroon;
+}
+.park-legend{
+    position: absolute;
+    margin-top: 1.7em;
+    margin-right: 3.2em;
+}
+.legend-content{
+    background-color: maroon;
+    color: white;
+    list-style-type: none;
+    padding: 20px;
+    border-radius: 10px;
+}
+h1.legend-title{
+    text-align: left;
+    font-size: 15px;
+}
+.park-motor{
+    color: purple;
+    margin-bottom: -.5em;
+}
+.park-car{
+    color: orange;
+    margin-right: -10em;
+    
+}
+.text-motor{
+    margin-top: -19px;
+    margin-left: 20px;
+}
+.text-car{
+    margin-top: -26.8px;
+    margin-left: -38px;
+    margin-bottom: .2em;
+}
+

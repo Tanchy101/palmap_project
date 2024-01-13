@@ -5,6 +5,7 @@ import { Icon } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
 import { useLockBodyScroll } from "@uidotdev/usehooks";
+import Legend from '../parking/legend-icon'
 import DropMenu from './dropmenu';
 import Parking from "../parking/parking";
 import DragDiv from './draggableMenu';
@@ -104,13 +105,19 @@ const MapWithGeolocation = () => {
   useLockBodyScroll();
   return (
     <>
-
+        
+      <div className='map-icons'>
         <div className="cntr-drpmn">
-          <div>
-            <DropMenu />
+            <div>
+              <DropMenu />
+            </div>
           </div>
-        </div>
 
+          <div className='map-legend'>
+            <Legend />
+          </div>
+      </div>
+        
       {/* //<button onClick={handleGeolocationClick}>Location</button> */}
       <MapContainer className='root' center={position} minZoom={19} zoom={19}
         dragging={true} scrollWheelZoom={'center'} zoomControl={false} attributionControl={false} whenCreated={handleMapLoad}>
@@ -124,7 +131,7 @@ const MapWithGeolocation = () => {
         </Marker>
         <Polygon positions={plmPolygonCoordinates} color="blue" />
 
-        <Parking/>
+      <Parking />
       <Gazebo1Mark/>
       <Gazebo2Mark/>
       <Gazebo3Mark/>
