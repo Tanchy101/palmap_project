@@ -3,8 +3,8 @@
     background-color: maroon;
     background-size: cover;
     height: 100vh;
-
 }
+
 .header-admin {
     background-image: url('./plmbg-profile.png');
     background-size: cover;
@@ -12,7 +12,6 @@
     font-size: 20px;
     display: flex;
     background-position: center center;
-    text-align: center;
     flex-direction: column;
     font-family: 'Poppins';
     font-weight: bold;
@@ -21,10 +20,84 @@
     color: black;
     margin-bottom: 0em;
     width: 100%;
-  }
+}
+
 .title-admin {
     font-size: 70px;
-    margin-top: 10px;
+    margin-top: .45em;
     font-family: 'Poppins';
+    text-align: center;
+}
+
+.logout-admin{
+    font-size: 70px;
+    margin-bottom: -1em;
+    margin-left: .6em;
+    margin-top: .6em;
+    z-index: 3;
+    position: absolute;
+}
+.logout-icon{
+    color: black;
+}
+
+.logout-icon:hover{
+    color: maroon;
+    z-index: 4;
+}
+
+.container-admin{
+    justify-content: left;
+    position: absolute;
+    background-color: #FFFFFFE5;
+    padding: 2.3rem;
+    margin-left: 3em;
+    margin-right: 30em;
+    margin-top: 10em;
+    border-radius: 20px;
+    width: 23%;
+    opacity: 90%;
+    height: 60vh;
 
 }
+
+.containerTitle-admin{
+    font-size: 17px;
+    font-family: 'Poppins';
+    color: black;
+    font-weight:bolder;
+    text-align: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.update-admin-btn{
+    text-align: center;
+    display: flex;
+    font-family: 'Poppins';
+    justify-content: center;
+    font-weight: 900;
+    font-size: 15px;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid;
+    width: 7em;
+    background-color: #ffd700;
+    padding: 1px;
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+    top: 5em;
+    left: 1.2em;
+    color: white;
+    margin-top: 20em;
+    margin-right: 10em;
+    margin-left: 7em;
+    height: 6%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.update-admin-btn:hover{
+    background-color: #e5c000;
+}
+
