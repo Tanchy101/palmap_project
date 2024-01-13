@@ -24,7 +24,7 @@
     margin-right: 3.2em;
 }
 .legend-content{
-    background-color: maroon;
+    background-color: rgba(128,0,0,.9) ;
     color: white;
     list-style-type: none;
     padding: 20px;

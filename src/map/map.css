@@ -10,12 +10,7 @@
     z-index: 0;
   }
   
-  /* height of the container */
-  .leaflet-container {
-    height: 100vh;
-    width: 100%;
-    border-color: maroon;
-  }
+  
   
   .cluster-icon {
     background-color: #333;
@@ -44,3 +39,16 @@
   text-decoration: solid;
   color: blue;
 }
+
+.gps-btn{
+  position: absolute;
+  z-index: 3;
+  border: none;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  font-size: 2.5em;
+  margin-top: 8.5em;
+}
+
+

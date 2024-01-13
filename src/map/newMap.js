@@ -30,6 +30,8 @@ import Gazebo18Mark from "../gazebo-marker/gazebo18-mark";
 
 import "./map.css";
 
+import { MdOutlineGpsFixed } from "react-icons/md";
+
 const customMarkerIcon = new Icon({
   iconUrl: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
   iconSize: [32, 32],
@@ -39,12 +41,12 @@ const customMarkerIcon = new Icon({
 
 const MapWithGeolocation = () => {
   // Replace these coordinates with the actual coordinates for Pamantasan ng Lungsod ng Maynila
-  const plmCenterCoordinates = [14.58680,120.97649];
+  const plmCenterCoordinates = [14.586685197445647, 120.97632633001342];
 
   // Replace these coordinates with the actual bounds for Pamantasan ng Lungsod ng Maynila
   const plmBounds = {
     minLat: 14.58586, // Adjust as needed
-    maxLat: 14.58784, // Adjust as needed
+    maxLat: 14.5877, // Adjust as needed
     minLng: 120.975328, // Adjust as needed
     maxLng: 120.9775, // Adjust as needed
   };
@@ -85,7 +87,7 @@ const MapWithGeolocation = () => {
           setPosition([latitude, longitude]);
 
           if (map) {
-            map.flyTo([latitude, longitude], 13, {
+            map.flyTo([latitude, longitude], 16, {
               duration: 2,
             });
           }
@@ -116,10 +118,11 @@ const MapWithGeolocation = () => {
           <div className='map-legend'>
             <Legend />
           </div>
-      </div>
-        
-      {/* //<button onClick={handleGeolocationClick}>Location</button> */}
-      <MapContainer className='root' center={position} minZoom={19} zoom={19}
+        </div>
+
+        <button className='gps-btn' onClick={handleGeolocationClick}><MdOutlineGpsFixed/></button>
+
+      <MapContainer className='root' center={position} minZoom={19} zoom={19} maxZoom={20}
         dragging={true} scrollWheelZoom={'center'} zoomControl={false} attributionControl={false} whenCreated={handleMapLoad}>
         <TileLayer
           url="https://tile.openstreetmap.de/{z}/{x}/{y}.png"
@@ -127,7 +130,7 @@ const MapWithGeolocation = () => {
           maxZoom={20}
         />
         <Marker position={position} icon={customMarkerIcon}>
-          <Popup>You are here!</Popup>
+          <Popup>nandito ka sir!</Popup>
         </Marker>
         <Polygon positions={plmPolygonCoordinates} color="blue" />
 

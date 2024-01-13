@@ -19,7 +19,6 @@ const GazeboInterface = () => {
             }}> <HomeButtonGazebo />
                 <PolygonWithTrapezoids />
                 <GazeboDragPanel />
-                <h2>DITO YUNG MAY HEXAGON</h2>
             </div>
         </>
     )
