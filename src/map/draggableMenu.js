@@ -40,7 +40,7 @@ const DragDiv = () => {
       <Draggable axis='y' position={position} onDrag={handleDrag} handle=".handle" cancel=".not-draggable">
       
         <div>
-            <div className="handle">...</div>
+            <div className="handle"></div>
              <div className="bldg-container">
                 <div
                   style={{

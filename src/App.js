@@ -3,7 +3,7 @@ import './App.css';
 import Home from './dashboard/Home';
 import Signup from './signup/Index';
 import Info from './info/infoPage';
-import Map from './map/map';
+
 import Profile from './myProfile/myProfile';
 import AboutUs from './aboutUs/aboutUs';
 
@@ -28,12 +28,15 @@ import Gazebo18 from './gazebo/gazebo18';
 
 import Admin from './AdminPanel/AdminPanel';
 
+import MapWithGeolocation from './map/newMap';
+
 import {
   createBrowserRouter,
   Route,
   createRoutesFromElements,
   RouterProvider,
 } from 'react-router-dom';
+
 
 
 
@@ -45,7 +48,7 @@ const router =createBrowserRouter(
       <Route path = "login" element={<Home />}></Route>
       <Route path = "info" element={<Info />}></Route>
       <Route path = "forgotpass" element={<Info />}></Route>
-      <Route path = "map" element={<Map />}></Route>
+      <Route path = "map" element={<MapWithGeolocation />}></Route>
       <Route path = "myProfile" element={<Profile />}></Route> 
       <Route path = "aboutus" element={<AboutUs />}></Route> 
 
@@ -69,6 +72,8 @@ const router =createBrowserRouter(
       <Route path = "gazebo18" element={<Gazebo18 />}></Route>
 
       <Route path = "AdminPanel" element={<Admin />}></Route>
+
+
       
       
 
