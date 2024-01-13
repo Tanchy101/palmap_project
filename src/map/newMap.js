@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, Polygon } from 'react-leaflet';
 import { Icon } from 'leaflet';
+import L from 'leaflet';
 
 import 'leaflet/dist/leaflet.css';
 
@@ -39,6 +40,10 @@ const customMarkerIcon = new Icon({
   popupAnchor: [0, -32],
 });
 
+const buildingCoordinates = {
+  lacson: [14.586593412262898, 120.97586313921279],
+}
+
 const MapWithGeolocation = () => {
   // Replace these coordinates with the actual coordinates for Pamantasan ng Lungsod ng Maynila
   const plmCenterCoordinates = [14.586685197445647, 120.97632633001342];
@@ -60,6 +65,7 @@ const MapWithGeolocation = () => {
 
   const [position, setPosition] = useState(plmCenterCoordinates);
   const [map, setMap] = useState(null);
+  const [buildingMarker, setBuildingMarker] = useState(null);
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -104,6 +110,15 @@ const MapWithGeolocation = () => {
   const handleMapLoad = (map) => {
     setMap(map);
   };
+
+  const handleBuildingClick = (buildingName) => {
+    console.log("building clicked: ", buildingName)
+
+    const clickedBuildingCoords = buildingCoordinates[buildingName];
+
+    setBuildingMarker(<Marker position={clickedBuildingCoords} icon={customMarkerIcon} ></Marker>);
+  }
+
   useLockBodyScroll();
   return (
     <>
@@ -132,6 +147,9 @@ const MapWithGeolocation = () => {
         <Marker position={position} icon={customMarkerIcon}>
           <Popup>nandito ka sir!</Popup>
         </Marker>
+
+        {buildingMarker}
+
         <Polygon positions={plmPolygonCoordinates} color="blue" />
 
       <Parking />
@@ -155,7 +173,8 @@ const MapWithGeolocation = () => {
       <Gazebo18Mark/>
 
       </MapContainer>
-      <DragDiv/>
+      
+      <DragDiv onBuildingClick={handleBuildingClick}/>
     </>
   );
 };

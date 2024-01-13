@@ -10,8 +10,8 @@ const SearchBar = (props) => {
     )
 }
 
-const DragDiv = () => {
-    const [position, setPosition] = React.useState({ x: 0, y: -100});
+const DragDiv = (props) => {
+    const [position, setPosition] = React.useState({ x: 0, y: -110});
   
     const handleDrag = (e, ui) => {
       // const { x, y } = ui;
@@ -19,7 +19,7 @@ const DragDiv = () => {
       
       const newY = position.y + ui.deltaY;
 
-      const snapTo = [-100, -230]
+      const snapTo = [-100, -370]
       const snappedY = snapTo.reduce((closest, snap) => {
         return Math.abs(newY - snap) < Math.abs(closest -snap) ? newY : closest;
       }, snapTo[0]);
@@ -37,7 +37,7 @@ const DragDiv = () => {
 
    
     return (
-      <Draggable axis='y' position={position} onDrag={handleDrag} handle=".handle" cancel=".not-draggable">
+      <Draggable axis='y' position={position} onDrag={handleDrag} handle=".handle" bounds = {{top: -350}}cancel=".not-draggable">
       
         <div>
             <div className="handle"></div>
@@ -58,11 +58,11 @@ const DragDiv = () => {
                 <div className="bldg-search-bar"> <SearchBar /> </div>
                 <div >
                 <div className="bldg-name"> 
-                  <FaBuilding className="bldg-logo"/> <a className='bldg-button' href='myProfile'> Gusaling Lacson </a> <br></br> <br></br>
+                  <FaBuilding className="bldg-logo"/> <a className='bldg-button' onClick={() => props.onBuildingClick('lacson')}> Gusaling Lacson </a> <br></br> <br></br>
 
-                  <FaBuilding className="bldg-logo"/> <a className='bldg-button' href="myProfile">Gusaling Bagatsing</a> <br></br> <br></br>
+                  <FaBuilding className="bldg-logo"/> <a className='bldg-button' onClick={() => props.onBuildingClick('bagatsing')}>Gusaling Bagatsing</a> <br></br> <br></br>
 
-                  <FaBuilding className="bldg-logo"/> <a className='bldg-button' href='myProfile'>Gusaling Villegas</a> 
+                  <FaBuilding className="bldg-logo"/> <a className='bldg-button' onClick={() => props.onBuildingClick('villegas')}>Gusaling Villegas</a> 
                 </div>
                 </div>
                   
