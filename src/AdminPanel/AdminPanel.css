@@ -101,3 +101,15 @@
     background-color: #e5c000;
 }
 
+.info-admin-btn{
+    position: absolute;
+    margin-top: 1.7em;
+    margin-right: 3.2em;
+}
+.info-admin-icon{
+    background-color: maroon;
+    color: white;
+    list-style-type: none;
+    padding: 20px;
+    border-radius: 10px;
+}

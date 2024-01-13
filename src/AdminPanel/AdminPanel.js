@@ -20,7 +20,16 @@ const Profile = () => {
                     </div>  
                 </Link>
                     </div>
+
+                <div>
+                <Link to ={"/login"} className='logout-icon'>
+                    <div>
+                    <BsInfoCircleFill />
+                    </div>  
+                </Link>
+                    </div>
                 </div>
+
            
         <div className="header-admin">
             <div className="title-admin">
