@@ -101,15 +101,46 @@
     background-color: #e5c000;
 }
 
-.info-admin-btn{
-    position: absolute;
-    margin-top: 1.7em;
-    margin-right: 3.2em;
-}
+
 .info-admin-icon{
-    background-color: maroon;
+    align-items: right;
     color: white;
-    list-style-type: none;
-    padding: 20px;
+}
+
+.info-admin-btn{
+    display: flex;
+    position: absolute;
+    margin-top: -1.27em;
+    margin-right: 3.2em;
+    margin-left: 19.65em;
+    margin-right: 30px;
+    margin-bottom: 10em;
+    color: maroon;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.info-admin{
+    position: absolute;
+    margin-top: 10px;
+    margin-right: -4.25em;
+    text-align: center;
+    margin-inline: -2em;
+    
+    
+    
+}
+
+.info-admin-content{
+    background-color: rgba(128,0,0,.9) ;
+    color: white;
+    height: 3em;
     border-radius: 10px;
+    margin-top: 50px;
+    padding: 30px;
+    font-size: 14px;
+  
+    
+    
+   
 }

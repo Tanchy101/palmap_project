@@ -7,7 +7,7 @@ import { BsInfoCircleFill } from "react-icons/bs";
 
 
 
-const Profile = () => {
+const AdminPanel = () => {
     return (
        <>
 
@@ -21,14 +21,15 @@ const Profile = () => {
                 </Link>
                     </div>
 
-                <div>
-                <Link to ={"/login"} className='logout-icon'>
+                <div class="info-admin-btn">
+                    <ul class="info-admin" role="menu">
+                        <h1 className="info-admin-content">Click something on the map to view their description and update their component.</h1>
+                    </ul>
                     <div>
                     <BsInfoCircleFill />
                     </div>  
-                </Link>
-                    </div>
                 </div>
+       </div>
 
            
         <div className="header-admin">
@@ -56,4 +57,4 @@ const Profile = () => {
 
 
 
-export default Profile; 
+export default AdminPanel; 
