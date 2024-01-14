@@ -1,25 +1,24 @@
-import React, { useState } from "react";
-import { BsInfoCircleFill } from "react-icons/bs";
-import info from "./AdminPanel.js"
+import React from "react";
+import "./AdminPanel.css";
 
-function InfoIconAdmin(){
 
-    const [isOpen, setIsOpen] = useState(false);
-
+function AdminInfo(){
     return(
-        <div className="info-admin-btn" >
-            <button onClick={() => setIsOpen((prev) => !prev)} className="info-admin-content">
-                <BsInfoCircleFill />
-            </button>
-
-            {isOpen &&
-                <InfoIconAdmin />
-            }
-        </div>
+        <>
+            <div class="info-admin">
+                <ul class="info-content" role="menu">
+                    <h1 className="info-main">Click something on the map to view their description and update their component.</h1>
+                </ul>
+            </div>
+            
+                
+        </>
     )
 }
 
-export default InfoIconAdmin;
+
+
+export default AdminInfo;
 
 
 

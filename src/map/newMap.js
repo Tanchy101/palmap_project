@@ -6,7 +6,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
 import { useLockBodyScroll } from "@uidotdev/usehooks";
-import Legend from '../parking/legend-icon'
+import Legend from '../parking/legend-icon';
 import DropMenu from './dropmenu';
 import Parking from "../parking/parking";
 import DragDiv from './draggableMenu';

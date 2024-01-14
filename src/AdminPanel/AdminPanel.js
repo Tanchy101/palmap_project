@@ -2,59 +2,44 @@ import './AdminPanel.css';
 import {Link} from 'react-router-dom';
 import { MdLogout } from "react-icons/md";
 import { BsInfoCircleFill } from "react-icons/bs";
-
-
-
-
+import Info from "./admin-icon.js";
 
 const AdminPanel = () => {
     return (
-       <>
-
-       <html className='html-admin'>
-       <div className="logout-admin">
-                <div>
-                <Link to ={"/login"} className='logout-icon'>
-                    <div>
-                    <MdLogout />
-                    </div>  
-                </Link>
-                    </div>
-
-                <div class="info-admin-btn">
-                    <ul class="info-admin" role="menu">
-                        <h1 className="info-admin-content">Click something on the map to view their description and update their component.</h1>
-                    </ul>
-                    <div>
-                    <BsInfoCircleFill />
-                    </div>  
-                </div>
-       </div>
-
-           
-        <div className="header-admin">
-            <div className="title-admin">
-             ADMIN PANEL
-            </div>
+    <>
+        <div className='map-legend'>
+            <Info />
         </div>
 
-        <div className ="container-admin">
+        <html className='html-admin'>
+
+            <div className="logout-admin">
+                <div>
+                    <Link to ={"/login"} className='logout-icon'>
+                        <div>
+                            <MdLogout />
+                        </div>  
+                    </Link>
+                </div>
+            </div>
+
+            <div className="header-admin">
+                <div className="title-admin">
+                    ADMIN PANEL
+                </div>
+            </div>
+
+            <div className ="container-admin">
                 <div className = "containerTitle-admin"> 
                     Gusaling what?
                 </div>
-                    <Link to ={"/AdminPanel"} className = "update-admin-btn">Update</Link>
-               
-        </div>
-       </html> 
-        </>
-
+                
+                <Link to ={"/AdminPanel"} className = "update-admin-btn">Update</Link>
+            </div>
+            
+        </html> 
+    </>
     )
 }
-
-
-
-
-
-
 
 export default AdminPanel; 
