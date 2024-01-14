@@ -8,7 +8,7 @@ const app = express();
 const port = 5000;
 
 // Set up Sequelize for PostgreSQL
-const sequelize = new Sequelize('palmap_db', 'postgres', 'sqlpass', {
+const sequelize = new Sequelize('palmap_db', 'postgres', 'browniepatootie', {
   host: 'localhost',
   dialect: 'postgres',
 });
@@ -84,8 +84,10 @@ app.post('/api/login', async (req, res) => {
     if (password !== user.password) {
       throw new Error;
     }
+    const { user_type } = user;
+
+    res.json({ success: true, user_type });
   
-    res.json({success: true});
   } catch (error) {
   console.error('Error during login:', error);
   res.status(500).json({error: 'Invalid Credentials'});

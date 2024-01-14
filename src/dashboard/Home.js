@@ -49,12 +49,23 @@ const Home = () => {
                     password,
                     });
                 console.log('Login successful:', response.data);
+                
+      // Assuming the response has a 'user_type' property
+                const user_type = response.data.user_type;
+
                 setError('');
-                navigateUser("/map");
-            } catch (error) {
-              setError(error.response.data.error);
-            }
-        }
+
+                if (user_type === 'user') {
+                    navigateUser('/map');
+                } else if (user_type === 'admin') {
+                    navigateUser('/AdminPanel');
+                } else {
+                    setError('Invalid user type');
+                }
+                } catch (error) {
+                setError(error.response.data.error);
+                }
+            };
     
         return (
             <>
