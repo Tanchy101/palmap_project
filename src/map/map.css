@@ -8,6 +8,7 @@
     color: #333;
     background-color: #f3e4d7;
     z-index: 0;
+    overflow-y: hidden;
   }
   
   

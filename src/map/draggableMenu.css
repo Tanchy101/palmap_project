@@ -10,7 +10,7 @@
 
 .bldg-search-bar {
     text-align: center;
-    width: 78%;
+    width: 70%;
     padding: 0.5em;
     margin: auto;
     margin-top: 1em;
@@ -18,8 +18,21 @@
 }
 
 .bldg-name{
-    text-align: center; 
-    padding-top: 3em;
+    text-align: center;
+    padding-top: 1.5em;
+}
+
+.scroll-container{
+  overflow-y: auto;
+  height: 30vh;
+}
+
+h4{
+  color: white;
+  font-weight: bold;
+  margin-top: 2px;
+  margin-bottom: 1em;
+  
 }
 
 .bldg-button {
@@ -37,15 +50,20 @@
   text-decoration: none;
 }
 .bldg-logo {
-  padding-right: 0.4em;
+  padding-right: 1em;
   padding-top: 1em;
   margin-bottom: -0.2em;
+  color: white;
 }
 
 .not-draggable::placeholder {
   text-align: center;
 }
- 
-/* .bldg-container {
-  position: relative;
-} */
+
+.top{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+

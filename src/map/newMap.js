@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, Polygon } from 'react-leaflet';
 import { Icon } from 'leaflet';
-import L from 'leaflet';
+
 
 import 'leaflet/dist/leaflet.css';
 
@@ -33,6 +33,7 @@ import "./map.css";
 
 import { MdOutlineGpsFixed } from "react-icons/md";
 
+
 const customMarkerIcon = new Icon({
   iconUrl: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
   iconSize: [32, 32],
@@ -41,8 +42,30 @@ const customMarkerIcon = new Icon({
 });
 
 const buildingCoordinates = {
+  //buildings
+  atienza: [14.586240916828295, 120.97694470083314],
+  bagatsing: [14.587199229365767, 120.97588527123013],
+  caquino: [14.587248069613732, 120.97691117321793],
+  eestrada: [14.586297051834032, 120.97683082288495],
+  katipunan: [14.58741582150116, 120.97645397253115],
   lacson: [14.586593412262898, 120.97586313921279],
+  villegas: [14.587013856624457, 120.97699338003919],
+
+  //facilities
+  cashier: [14.586416042719083, 120.97701585406797],
+  chapel: [14.586037070923469, 120.97629840054806],
+  entcenter: [14.586231104119165, 120.97598458209953],
+  icto: [14.587218884414666, 120.97681189572319],
+  jaaditorium: [14.586424101332044, 120.97595502827402],
+  registrar: [14.587491280981853, 120.97625063119077],
+  rsgym: [14.58690553933514, 120.97557715334926],
+  tbayan: [14.586750928893508, 120.97658503975529],
+
+  //others
+  canteen: [14.587149218167333, 120.97669688700499]
 }
+
+
 
 const MapWithGeolocation = () => {
   // Replace these coordinates with the actual coordinates for Pamantasan ng Lungsod ng Maynila
@@ -116,7 +139,7 @@ const MapWithGeolocation = () => {
 
     const clickedBuildingCoords = buildingCoordinates[buildingName];
 
-    setBuildingMarker(<Marker position={clickedBuildingCoords} icon={customMarkerIcon} ></Marker>);
+    setBuildingMarker(<Marker position={clickedBuildingCoords} icon={customMarkerIcon}></Marker>);
   }
 
   useLockBodyScroll();
@@ -137,7 +160,7 @@ const MapWithGeolocation = () => {
 
         <button className='gps-btn' onClick={handleGeolocationClick}><MdOutlineGpsFixed/></button>
 
-      <MapContainer className='root' center={position} minZoom={19} zoom={19} maxZoom={20}
+      <MapContainer className='root' center={position} minZoom={15} zoom={19} maxZoom={20}
         dragging={true} scrollWheelZoom={'center'} zoomControl={false} attributionControl={false} whenCreated={handleMapLoad}>
         <TileLayer
           url="https://tile.openstreetmap.de/{z}/{x}/{y}.png"
@@ -145,7 +168,7 @@ const MapWithGeolocation = () => {
           maxZoom={20}
         />
         <Marker position={position} icon={customMarkerIcon}>
-          <Popup>nandito ka sir!</Popup>
+          <Popup>You are here!</Popup>
         </Marker>
 
         {buildingMarker}
@@ -174,7 +197,7 @@ const MapWithGeolocation = () => {
 
       </MapContainer>
       
-      <DragDiv onBuildingClick={handleBuildingClick}/>
+      <DragDiv onBuildingClick={handleBuildingClick} />
     </>
   );
 };
