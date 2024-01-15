@@ -4,11 +4,40 @@ import './draggableMenu.css';
 import { FaBuilding } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
+import { useState } from 'react';
 
 
 const SearchBar = (props) => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [buttons, setButtons] = useState([
+    { id: 1, name: 'Button 1' },
+    { id: 2, name: 'Button 2' },
+    { id: 3, name: 'Button 3' },
+    { id: 4, name: 'Button 4' },
+    { id: 5, name: 'Button 5' },
+    // Add more buttons as needed
+  ]);
+
+  const handleSearch = () => {
+  const filteredButtons = buttons.filter(button =>
+    button.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setButtons(filteredButtons);
+  };
+
   return (
-      <input className='not-draggable' autoComplete = "on" type = "text" placeholder ="Where do you want to go?" style={{ border: 'none',}}>{props.Input}</input>
+    <><span><input className='not-draggable' autoComplete = "on" value={searchTerm}
+      onChange={e => setSearchTerm(e.target.value)} type = "text" placeholder ="Where do you want to go?" 
+      style={{ border: 'none',}}>{props.Input}</input> 
+      <button onClick={handleSearch}>Search</button></span>
+
+      <ul>
+        {buttons.map(button => (
+          <li key={button.id}>{button.name}</li>
+        ))}
+      </ul>
+      </>
+      
     )
 }
 

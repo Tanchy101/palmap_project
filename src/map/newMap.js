@@ -137,7 +137,7 @@ const MapWithGeolocation = () => {
   const handleBuildingClick = (buildingName) => {
     console.log("building clicked: ", buildingName)
 
-    const clickedBuildingCoords = buildingCoordinates[buildingName];
+  const clickedBuildingCoords = buildingCoordinates[buildingName];
 
     setBuildingMarker(<Marker position={clickedBuildingCoords} icon={customMarkerIcon}></Marker>);
   }
