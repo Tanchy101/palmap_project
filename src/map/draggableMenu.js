@@ -2,8 +2,6 @@ import Draggable from 'react-draggable';
 import React from 'react';
 import './draggableMenu.css';
 import { FaBuilding } from "react-icons/fa";
-import { Link } from 'react-router-dom';
-import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 import { useState } from 'react';
 
 
@@ -91,45 +89,45 @@ const DragDiv = (props) => {
 
                     <h4>Buildings</h4>
 
-                    <FaBuilding className="bldg-logo"/> <a className='bldg-button' onClick={() => props.onBuildingClick('atienza')}> Gusaling Atienza</a> <br></br> <br></br>
+                    <FaBuilding className="bldg-logo"/> <a href="#/" className='bldg-button' onClick={() => props.onBuildingClick('atienza')}> Gusaling Atienza</a> <br></br> <br></br>
 
-                    <FaBuilding className="bldg-logo"/> <a className='bldg-button' onClick={() => props.onBuildingClick('bagatsing')}>Gusaling Bagatsing</a> <br></br> <br></br>
+                    <FaBuilding className="bldg-logo"/> <a href="#/" className='bldg-button' onClick={() => props.onBuildingClick('bagatsing')}>Gusaling Bagatsing</a> <br></br> <br></br>
 
-                    <FaBuilding className="bldg-logo"/> <a className='bldg-button' onClick={() => props.onBuildingClick('caquino')}>Gusaling Corazon Aquino</a> <br></br> <br></br>
+                    <FaBuilding className="bldg-logo"/> <a href="#/" className='bldg-button' onClick={() => props.onBuildingClick('caquino')}>Gusaling Corazon Aquino</a> <br></br> <br></br>
                   
-                    <FaBuilding className="bldg-logo"/> <a className='bldg-button' onClick={() => props.onBuildingClick('eestrada')}> Gusaling Ejercito Estrada</a> <br></br> <br></br>
+                    <FaBuilding className="bldg-logo"/> <a href="#/" className='bldg-button' onClick={() => props.onBuildingClick('eestrada')}> Gusaling Ejercito Estrada</a> <br></br> <br></br>
 
-                    <FaBuilding className="bldg-logo"/> <a className='bldg-button' onClick={() => props.onBuildingClick('katipunan')}>Gusaling Katipunan</a> <br></br> <br></br>
+                    <FaBuilding className="bldg-logo"/> <a href="#/" className='bldg-button' onClick={() => props.onBuildingClick('katipunan')}>Gusaling Katipunan</a> <br></br> <br></br>
 
-                    <FaBuilding className="bldg-logo"/> <a className='bldg-button' onClick={() => props.onBuildingClick('lacson')}>Gusaling Lacson</a> <br></br> <br></br>
+                    <FaBuilding className="bldg-logo"/> <a href="#/" className='bldg-button' onClick={() => props.onBuildingClick('lacson')}>Gusaling Lacson</a> <br></br> <br></br>
 
-                    <FaBuilding className="bldg-logo"/> <a className='bldg-button' onClick={() => props.onBuildingClick('villegas')}>Gusaling Villegas</a> <br></br> <br></br>
+                    <FaBuilding className="bldg-logo"/> <a href="#/" className='bldg-button' onClick={() => props.onBuildingClick('villegas')}>Gusaling Villegas</a> <br></br> <br></br>
 
                     <h4>Facilities</h4>
 
-                    <FaBuilding className="bldg-logo"/> <a className='bldg-button' onClick={() => props.onBuildingClick('cashier')}> Cashier</a> <br></br> <br></br>
+                    <FaBuilding className="bldg-logo"/> <a href="#/" className='bldg-button' onClick={() => props.onBuildingClick('cashier')}> Cashier</a> <br></br> <br></br>
 
-                    <FaBuilding className="bldg-logo"/> <a className='bldg-button' onClick={() => props.onBuildingClick('chapel')}>Chapel</a> <br></br> <br></br>
+                    <FaBuilding className="bldg-logo"/> <a href="#/" className='bldg-button' onClick={() => props.onBuildingClick('chapel')}>Chapel</a> <br></br> <br></br>
 
-                    <FaBuilding className="bldg-logo"/> <a className='bldg-button' onClick={() => props.onBuildingClick('entcenter')}>Entrep. Center</a> <br></br> <br></br>
+                    <FaBuilding className="bldg-logo"/> <a href="#/" className='bldg-button' onClick={() => props.onBuildingClick('entcenter')}>Entrep. Center</a> <br></br> <br></br>
                   
-                    <FaBuilding className="bldg-logo"/> <a className='bldg-button' onClick={() => props.onBuildingClick('gazebos')}>Gazebos</a> <br></br> <br></br>
+                    <FaBuilding className="bldg-logo"/> <a href="#/" className='bldg-button' onClick={() => props.onBuildingClick('gazebos')}>Gazebos</a> <br></br> <br></br>
 
-                    <FaBuilding className="bldg-logo"/> <a className='bldg-button' onClick={() => props.onBuildingClick('icto')}>ICTO</a> <br></br> <br></br>
+                    <FaBuilding className="bldg-logo"/> <a href="#/" className='bldg-button' onClick={() => props.onBuildingClick('icto')}>ICTO</a> <br></br> <br></br>
 
-                    <FaBuilding className="bldg-logo"/> <a className='bldg-button' onClick={() => props.onBuildingClick('jaaditorium')}>J.A. Auditorium</a> <br></br> <br></br>
+                    <FaBuilding className="bldg-logo"/> <a href="#/" className='bldg-button' onClick={() => props.onBuildingClick('jaaditorium')}>J.A. Auditorium</a> <br></br> <br></br>
 
-                    <FaBuilding className="bldg-logo"/> <a className='bldg-button' onClick={() => props.onBuildingClick('registrar')}>Registrar</a> <br></br> <br></br>
+                    <FaBuilding className="bldg-logo"/> <a href="#/" className='bldg-button' onClick={() => props.onBuildingClick('registrar')}>Registrar</a> <br></br> <br></br>
 
-                    <FaBuilding className="bldg-logo"/> <a className='bldg-button' onClick={() => props.onBuildingClick('rsgym')}>R.S. Gym</a> <br></br> <br></br>
+                    <FaBuilding className="bldg-logo"/> <a href="#/" className='bldg-button' onClick={() => props.onBuildingClick('rsgym')}>R.S. Gym</a> <br></br> <br></br>
 
-                    <FaBuilding className="bldg-logo"/> <a className='bldg-button' onClick={() => props.onBuildingClick('tbayan')}>Tanghalang Bayan</a> <br></br> <br></br>
+                    <FaBuilding className="bldg-logo"/> <a href="#/" className='bldg-button' onClick={() => props.onBuildingClick('tbayan')}>Tanghalang Bayan</a> <br></br> <br></br>
 
                     <h4>Others</h4>
 
-                    <FaBuilding className="bldg-logo"/> <a className='bldg-button' onClick={() => props.onBuildingClick('canteen')}>Canteen</a> <br></br> <br></br>
+                    <FaBuilding className="bldg-logo"/> <a href="#/" className='bldg-button' onClick={() => props.onBuildingClick('canteen')}>Canteen</a> <br></br> <br></br>
 
-                    <FaBuilding className="bldg-logo"/> <a className='bldg-button' onClick={() => props.onBuildingClick('parking')}>Parking</a>
+                    <FaBuilding className="bldg-logo"/> <a href="#/" className='bldg-button' onClick={() => props.onBuildingClick('parking')}>Parking</a>
 
                   </div>
                 </div>
