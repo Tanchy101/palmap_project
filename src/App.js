@@ -78,6 +78,7 @@ const router =createBrowserRouter(
       <Route path = "gazebo18" element={<Gazebo18 />}></Route>
 
       <Route path = "AdminPanel" element={<Admin />}></Route>
+      
 
       
       

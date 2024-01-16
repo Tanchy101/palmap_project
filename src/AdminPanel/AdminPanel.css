@@ -7,6 +7,21 @@
     url("https://db.onlinewebfonts.com/t/1a69bbaf09f62b4596f5020478cd0399.ttf")format("truetype"),
     url("https://db.onlinewebfonts.com/t/1a69bbaf09f62b4596f5020478cd0399.svg#Poppins ExtraBold")format("svg");
 }
+.adm-mapcontainer{
+    height: 72.3vh;
+    width: 130vh;
+    justify-content: right;
+    margin-left: 43em;
+    margin-bottom: 50.05px;
+    margin-top: -68.90em;
+    border: solid;
+    box-sizing: border-box;
+    border-color: #FFFFFFE5;
+    border-radius: 2rem;
+    position: fixed;
+    box-shadow: 0 0 0px 5px #FFFFFFE5;
+    opacity: 100%;
+}
 
 .html-admin{
     display: flex;
@@ -18,9 +33,9 @@
 .header-admin {
     background-image: url('./plmbg-profile.png');
     background-size: cover;
-    height: 15em;
+    height: 13em;
     font-size: 20px;
-    display: flex;
+    display:flex;
     background-position: center center;
     flex-direction: column;
     font-family: 'Poppins';
@@ -45,7 +60,7 @@
     font-size: 70px;
     margin-bottom: -1em;
     margin-left: .6em;
-    margin-top: .6em;
+    margin-top: -3.10em;
     z-index: 3;
     position: absolute;
 }
@@ -65,11 +80,11 @@
     padding: 2.3rem;
     margin-left: 3em;
     margin-right: 30em;
-    margin-top: 11em;
-    border-radius: 20px;
+    margin-top: -6em;
+    border-radius: 2rem;
     width: 22%;
     opacity: 90%;
-    height: 60vh;
+    height: 62.50vh;
 
 }
 
@@ -82,6 +97,18 @@
     justify-content: center;
     margin-right: auto;
     margin-left: auto;
+}
+
+.containerContent-admin{
+    font-size: 15px;
+    font-family: 'Poppins';
+    color: black;
+    font-weight: 10%;
+    text-align: justify;
+    justify-content: justify;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
 }
 
 .update-admin-btn{
@@ -103,7 +130,7 @@
     top: 5em;
     left: 1.2em;
     color: black;
-    margin-top: 20em;
+    margin-top: 19em;
     margin-right: 10em;
     margin-left: 6.50em;
     height: 6%;
