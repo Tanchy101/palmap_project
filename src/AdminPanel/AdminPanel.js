@@ -47,10 +47,10 @@ const MapWithGeolocation = () => {
             
          <div className ="container-admin">
               <div className = "containerTitle-admin"> 
-                    Gusaling what?
+                    [Building Name]
               </div>
                 <div className = "containerContent-admin"> 
-                    Dito ang mga contents.
+                    [Building description and features]
                 </div>
 
               <Link to ={"/AdminPanel"} className = "update-admin-btn">Update</Link>       
