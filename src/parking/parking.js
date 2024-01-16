@@ -1,5 +1,4 @@
 import { Polygon } from "react-leaflet";
-import Icon from "./legend-icon";
 
 const multiPolygonCar = [
     [

@@ -3,6 +3,7 @@ import './App.css';
 import Home from './dashboard/Home';
 import Signup from './signup/Index';
 import Info from './info/infoPage';
+import GuestInfoPage from './info/guestInfopage';
 import ForgotPass from './change-pass/EnterEmail';
 import Check from './change-pass/Check';
 import Profile from './myProfile/myProfile';
@@ -39,6 +40,7 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from 'react-router-dom';
+import GuestMap from './map/guestMap';
 
 
 
@@ -50,6 +52,7 @@ const router =createBrowserRouter(
       <Route path = "signup" element={<Signup />}></Route>
       <Route path = "login" element={<Home />}></Route>
       <Route path = "info" element={<Info />}></Route>
+      <Route path = "guestinfo" element={<GuestInfoPage/>}></Route>
       <Route path = "forgotpass" element={<ForgotPass />}></Route>
       <Route path = "check" element={<Check />}></Route>
       <Route path = "reset-password" element={<PasswordUpdate />}></Route>
@@ -81,7 +84,7 @@ const router =createBrowserRouter(
       
 
       
-      
+      <Route path = "guestMap" element={<GuestMap/ >}></Route>
       
 
     </Route>

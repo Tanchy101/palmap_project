@@ -1,14 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { MapContainer, TileLayer, Marker } from 'react-leaflet';
-import { Icon } from 'leaflet';
+import React, { useState} from 'react';
+import { MapContainer, TileLayer} from 'react-leaflet';
 import './AdminPanel.css';
 import {Link} from 'react-router-dom';
 import { MdLogout } from "react-icons/md";
 import Info from "./admin-icon.js";
-import AdminInfo from './AdminPanel-info';
-import adminMap from './adminMap.js';
-
-
 
 import 'leaflet/dist/leaflet.css';
 
@@ -16,49 +11,13 @@ import { useLockBodyScroll } from "@uidotdev/usehooks";
 
 
 
-
-const customMarkerIcon = new Icon({
-  iconUrl: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
-  iconSize: [32, 32],
-  iconAnchor: [16, 32],
-  popupAnchor: [0, -32],
-});
-
-
-
-
 const MapWithGeolocation = () => {
-  // Replace these coordinates with the actual coordinates for Pamantasan ng Lungsod ng Maynila
+  useLockBodyScroll();
+
   const plmCenterCoordinates = [14.586685197445647, 120.97632633001342];
 
+  const [position] = useState(plmCenterCoordinates);
 
-  const [position, setPosition] = useState(plmCenterCoordinates);
-  const [map, setMap] = useState(null);
-  const [buildingMarker, setBuildingMarker] = useState(null);
-
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition(
-      (pos) => {
-        const { latitude, longitude } = pos.coords;
-        setPosition([latitude, longitude]);
-      },
-      (err) => {
-        console.error(err.message);
-      }
-    );
-  }, []);
-
- 
-
-  const handleMapLoad = (map) => {
-    setMap(map);
-  };
-
-
-
-
-
-  useLockBodyScroll();
   return (
     <>
         
@@ -108,11 +67,6 @@ const MapWithGeolocation = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           maxZoom={20}
         />
-        
-        
-
-
-        {buildingMarker}
 
       </MapContainer>
       

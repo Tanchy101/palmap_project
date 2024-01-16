@@ -1,11 +1,7 @@
 import './AdminPanel.css';
 import {Link} from 'react-router-dom';
 import { MdLogout } from "react-icons/md";
-import { BsInfoCircleFill } from "react-icons/bs";
 import Info from "./admin-icon.js";
-import AdminPanel from './AdminPanel.js'
-
-
 
 const adminMap = () => {
     return (
