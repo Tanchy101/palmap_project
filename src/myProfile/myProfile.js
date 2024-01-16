@@ -1,5 +1,5 @@
-
 import './myProfile.css';
+import ProfileHome from './ProfileHome';
 import {Link} from 'react-router-dom';
 
 
@@ -91,7 +91,9 @@ const Profile = () => {
     return (
        <>
        <html className='htmlmyProfile'>
+        
             <div className="header">
+            <ProfileHome />
                 <p className="profile-title">My Profile</p>
             </div>
             <div className="row">

@@ -5,6 +5,29 @@
     height: 100vh;
 
 }
+.HomeBtnProf{
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    flex-direction: row;
+    display: flex;
+    position: absolute;
+    margin-top: -.65em;
+}
+.HomeBtnProf:hover {
+    font-family: 'Poppins';
+    font-weight: bold;
+    text-decoration: none;
+    color: maroon;
+    flex-direction: row;
+    display: flex;
+}
+.house-icon-prof {
+    margin-left: 20px;
+}
+
 .header {
     background-image: url('./plmbg-profile.png');
     background-size: cover;
@@ -13,7 +36,7 @@
     display: flex;
     background-position: center center;
     text-align: center;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     font-family: 'Poppins';
