@@ -7,7 +7,8 @@ import GuestInfoPage from './info/guestInfopage';
 import ForgotPass from './change-pass/EnterEmail';
 import Check from './change-pass/Check';
 import Profile from './myProfile/myProfile';
-import AboutUs from './aboutUs/aboutUs';
+import AboutUs from './aboutUs/aboutUsguest';
+import AboutUsGuest from './aboutUs/aboutUsguest';
 import PasswordUpdate from './change-pass/PasswordUpdate'
 import UpdateSuccess from './change-pass/UpdateSuccess'
 
@@ -40,7 +41,8 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from 'react-router-dom';
-import GuestMap from './map/guestMap';
+
+import MapGuest from './map/guestMap';
 
 
 
@@ -60,6 +62,7 @@ const router =createBrowserRouter(
       <Route path = "map" element={<MapWithGeolocation />}></Route>
       <Route path = "myProfile" element={<Profile />}></Route> 
       <Route path = "aboutus" element={<AboutUs />}></Route> 
+      <Route path = "aboutusguest" element={<AboutUsGuest />}></Route>
 
       <Route path = "gazebo1" element={<Gazebo1 />}></Route>
       <Route path = "gazebo2" element={<Gazebo2 />}></Route>
@@ -84,7 +87,7 @@ const router =createBrowserRouter(
       
 
       
-      <Route path = "guestMap" element={<GuestMap/ >}></Route>
+      <Route path = "guestMap" element={<MapGuest />}></Route>
       
 
     </Route>

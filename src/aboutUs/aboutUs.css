@@ -155,6 +155,10 @@ i{
     flex-direction: row;
     display: flex;
 }
+h4.meet{
+    color: black;
+    font-weight: 600;
+}
 @media only screen and (max-width:768px) {
     .pics{
         background-color: maroon;

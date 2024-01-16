@@ -7,7 +7,7 @@ function GuestDropDown(){
         <>
             <div class="dropdown">
             <ul class="dropdown-content" role="menu">
-                <li className="delay2"><Link to ={"/aboutus"} className = "guestaboutUs">About</Link></li>
+                <li className="delay2"><Link to ={"/aboutusguest"} className = "guestaboutUs">About</Link></li>
                 <li className="delay3"><Link to ={"/login"} className = "logout">Logout</Link></li>
             </ul>
             </div>

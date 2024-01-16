@@ -1,4 +1,4 @@
-import HomeAboutUs from './HomeAboutUs'
+import HomeAboutUsGuest from './HomeAboutUsGuest'
 import './aboutUs.css';
 import mel from './mel.png'
 import cj from './cj.png'
@@ -12,7 +12,7 @@ const aboutUs = () =>  {
   return (
     <>
     <div className="info">
-    <HomeAboutUs />
+    <HomeAboutUsGuest />
         <div className="palmap-about">
             PaLMap
         </div>

@@ -37,19 +37,18 @@ const SearchBar = ({ buttons }) => {
 const DragDiv = (props) => {
     const [position, setPosition] = React.useState({ x: 0, y: -110});
     const buttonList = [
-      { label: 'BUILDINGS'},
+      { label: 'BUILDINGS', className: 'buildings-label'},
       { className: 'labelCategory', id: 1, label: 'Gusaling Atienza', onClick: () => props.onBuildingClick('atienza') },
       { id: 2, label: 'Gusaling Bagatsing', onClick:() => props.onBuildingClick('bagatsing') },
       { id: 3, label: 'Gusaling Corazon Aquino', onClick: () => props.onBuildingClick('caquino') },
       { id: 4, label: 'Gusaling Ejercito Estrada', onClick: () => props.onBuildingClick('eestrada') },
       { id: 5, label: 'Gusaling Katipunan', onClick: () => props.onBuildingClick('katipunan') },
-      { id: 6, label: 'Gusaling Lacson', onClick: () => props.onBuildingClick('lacons')},
+      { id: 6, label: 'Gusaling Lacson', onClick: () => props.onBuildingClick('lacson')},
       { id: 7, label: 'Gusaling Villegas', onClick: () => props.onBuildingClick('villegas') },
       {  label: 'FACILITIES', },
       { id: 8, label: 'Cashier', onClick: () => props.onBuildingClick('cashier') },
       { id: 9, label: 'Chapel', onClick: () => props.onBuildingClick('chapel') },
       { id: 10, label: 'Entrep. Center', onClick: () => props.onBuildingClick('entcenter') },
-      { id: 11, label: 'Gazebos', onClick: () => props.onBuildingClick('gazebos') },
       { id: 12, label: 'ICTO', onClick: () => props.onBuildingClick('icto') },
       { id: 13, label: 'J.A. Auditorium', onClick: () => props.onBuildingClick('jaaditorium') },
       { id: 14, label: 'Registrar', onClick: () => props.onBuildingClick('registrar') },
@@ -57,7 +56,6 @@ const DragDiv = (props) => {
       { id: 16, label: 'Tanghalang Bayan', onClick: () => props.onBuildingClick('tbayan') },
       {label: 'OTHERS'},
       { id: 17, label: 'Canteen', onClick:() => props.onBuildingClick('canteen')},
-      { id: 18, label: 'Parking', onClick: () => props.onBuildingClick('parking')},
     ];
     const handleDrag = (e, ui) => {
       // const { x, y } = ui;
