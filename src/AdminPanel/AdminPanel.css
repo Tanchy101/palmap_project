@@ -7,22 +7,31 @@
     url("https://db.onlinewebfonts.com/t/1a69bbaf09f62b4596f5020478cd0399.ttf")format("truetype"),
     url("https://db.onlinewebfonts.com/t/1a69bbaf09f62b4596f5020478cd0399.svg#Poppins ExtraBold")format("svg");
 }
-.adm-mapcontainer{
-    height: 72.3vh;
-    width: 130vh;
-    justify-content: right;
-    margin-left: 43em;
-    margin-bottom: 50.05px;
-    margin-top: -68.90em;
+.adm-mapcontainer {
+    margin-top: 0; /* Adjusted margin-top */
     border: solid;
     box-sizing: border-box;
     border-color: #FFFFFFE5;
     border-radius: 2rem;
-    position: fixed;
     box-shadow: 0 0 0px 5px #FFFFFFE5;
     opacity: 100%;
-}
-
+    height: 80em;
+  }
+  
+  .container-admin-map {
+    justify-content: left;
+    position: absolute;
+    background-color: #FFFFFFE5;
+    padding: 2.3rem;
+    margin-left: 33%;
+    margin-top: -6em;
+    border-radius: 2rem;
+    width: 60%;
+    opacity: 90%;
+    height: 62.50vh;
+    display: flex; /* Added to make children flex items */
+    flex-direction: column; /* Added to make children stack vertically */
+  }
 .html-admin{
     display: flex;
     background-color: maroon;
@@ -85,7 +94,6 @@
     width: 22%;
     opacity: 90%;
     height: 62.50vh;
-
 }
 
 .containerTitle-admin{
