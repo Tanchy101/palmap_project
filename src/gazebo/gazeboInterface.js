@@ -3,8 +3,13 @@ import backgroundImage from './GazeboBackgroundImage.jpg'
 import HomeButtonGazebo from './HomeButtonGazebo'
 import GazeboDragPanel from './gazeboDragPanel'
 import PolygonWithTrapezoids from './gazeboHexagon'
+// import OccupantList from './gazeboFunction'
+
+
 
 const GazeboInterface = () => {
+
+
     return(
         <>
             {/* Here is the code for the gazebo UI*/}
@@ -17,6 +22,9 @@ const GazeboInterface = () => {
                 justifyContent: 'center',
                 color: 'white',
             }}> <HomeButtonGazebo />
+                {/* try lang muna para sa toggle */}
+                {/* <OccupantList/> */}
+
                 <PolygonWithTrapezoids />
                 <GazeboDragPanel />
             </div>

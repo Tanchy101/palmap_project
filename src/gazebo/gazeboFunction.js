@@ -1,19 +1,10 @@
-import React from 'react';
-import './gazebo.css'
-import { MdPerson } from "react-icons/md";
-import { MdArrowBackIos } from "react-icons/md";
-import { MdArrowForwardIos } from "react-icons/md";
-import { Switch } from "antd"
-import {Link} from 'react-router-dom';
-
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import {  message } from 'antd';
+import { Switch, message } from 'antd';
 
 const OccupantList = () => {
   const [occupants, setOccupants] = useState([]);
   const [occupiedCount, setOccupiedCount] = useState(0);
-  const [showRedSquare, setShowRedSquare] = useState(false);
 
   useEffect(() => {
     // Fetch occupants from the database
@@ -56,8 +47,7 @@ const OccupantList = () => {
         setOccupiedCount(prevCount => (isOccupied ? prevCount - 1 : prevCount + 1));
 
         // Show a success message
-        message.success(`You have ${isOccupied ? 'vacated' : 'occupied'} this Gazebo!`);
-        setShowRedSquare(!isOccupied);
+        message.success(`Occupant ${isOccupied ? 'vacated' : 'occupied'} successfully!`);
       } else {
         // Show a warning message if the switch has already been toggled
         message.warning('Switch already toggled for this occupant.');
@@ -70,72 +60,34 @@ const OccupantList = () => {
   };
 
   return (
-   
     <div>
-      
-      <MdPerson size={40} className="occupantsLogo"/> <span style={{paddingRight: '10px', marginLeft: '-10px', fontSize: '25px',}}>{occupiedCount}</span>
-      
+      <p>Number of Occupied Occupants: {occupiedCount}</p>
+      <ul>
         {occupants.map(occupant => (
-          <span key={occupant.id} >
-            <span style={{marginLeft: '140px', fontSize: '19px'}}>Occupied: {occupant.isOccupied ? 'Yes' : 'No'}
+          <li key={occupant.id}>
+            {occupant.name} - Occupied: {occupant.isOccupied ? 'Yes' : 'No'}
             <Switch
               checked={occupant.isOccupied}
               onChange={() => handleSwitchToggle(occupant.id, occupant.isOccupied, occupant.hasToggled)}
               disabled={false} // Allow switching for all users
-            /></span>
-          </span> 
+            />
+          </li>
         ))}
         {!occupants.length && (
-         <span>
+          <li>
+            Default Occupant - Occupied: No
             <Switch
               checked={false}
               onChange={() => handleSwitchToggle(-1, false, false)}
               disabled={false}
-            /></span>
-            
-         
+              
+              // Allow switching for all users
+            />
+          </li>
         )}
-      {showRedSquare && (
-        <div style={{ width: '2.8em', height: '4.56em', backgroundColor: 'brown', marginLeft: '2.5em', transform: 'translateX(1px) translateY(-365px)', }}>
-          {/* Little red square */}
-        </div>
-      )}
-      
+      </ul>
     </div>
   );
 };
 
-
-
-// hereeee is the orig code
-const GazeboPanel = () => {
-      return (
-        <div className="gazebo-container">
-          <div className='upper-part'>
-            <div>
-                <Link to={"/gazebo10"} className="arrow-left-1">
-                  <div>
-                    <MdArrowBackIos className="arrow-left-icon"/>
-                  </div>
-                </Link>
-              </div>
-
-              <div className="gazebo-label">Gazebo 11</div>
-
-              <div>
-                <Link to={"/gazebo12"} className="arrow-right">
-                  <div>
-                    <MdArrowForwardIos className="arrow-right-icon"/>
-                  </div>
-                </Link>
-              </div>
-
-          </div>
-              <div className="gazebo-content">
-               <OccupantList />
-              </div>
-        </div>
-      )
-}
-
-export default GazeboPanel
+export default OccupantList;

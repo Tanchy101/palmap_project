@@ -8,7 +8,7 @@ const app = express();
 const port = 5000;
 
 // Set up Sequelize for PostgreSQL
-const sequelize = new Sequelize('palmap_db', 'postgres', 'browniepatootie', {
+const sequelize = new Sequelize('palmap_db', 'postgres', 'sqlpass', {
   host: 'localhost',
   dialect: 'postgres',
 });
@@ -42,10 +42,27 @@ const User = sequelize.define('User', {
     defaultValue: 'user',
   }
 });
-//add column to the db para ma agnas
+
+// Define the model for the 'Occupant' table
+const Occupant = sequelize.define('Occupant', {
+  name: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  isOccupied: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false,
+    defaultValue: false,
+  },
+  hasToggled: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false,
+    defaultValue: false,
+  },
+});
 
 // Sync the model with the database
-sequelize.sync({ alter: true })
+sequelize.sync()
   .then(() => {
     console.log('Database and tables synced');
   })
@@ -154,6 +171,48 @@ app.post('/api/update-password', async (req, res) => {
   }
 });
 
+// Endpoint to update the 'isOccupied' and 'hasToggled' columns in the database
+app.post('/api/updateOccupant', async (req, res) => {
+  const { id, isOccupied, hasToggled } = req.body;
+
+  try {
+    // Check if the switch has already been toggled for this occupant
+    if (hasToggled) {
+      // Toggle the 'isOccupied' field in the database
+      await Occupant.update({ isOccupied: !isOccupied }, { where: { id } });
+      res.status(200).json({ success: true });
+    } else {
+      // Set 'hasToggled' to true in the 'Occupant' table
+      await Occupant.update({ hasToggled: true }, { where: { id } });
+      res.status(200).json({ success: true });
+    }
+  } catch (error) {
+    console.error('Error updating occupant:', error);
+    res.status(500).json({ success: false, error: 'Internal Server Error' });
+  }
+});
+
+// Endpoint to fetch the number of occupied occupants from the database
+app.get('/api/getOccupiedCount', async (req, res) => {
+  try {
+    const occupiedCount = await Occupant.count({ where: { isOccupied: true } });
+    res.status(200).json({ occupiedCount });
+  } catch (error) {
+    console.error('Error fetching occupied count:', error);
+    res.status(500).json({ success: false, error: 'Internal Server Error' });
+  }
+});
+
+// Endpoint to fetch all occupants from the database
+app.get('/api/getOccupants', async (req, res) => {
+  try {
+    const occupants = await Occupant.findAll({ attributes: ['id', 'name', 'isOccupied', 'hasToggled'] });
+    res.status(200).json(occupants);
+  } catch (error) {
+    console.error('Error fetching occupants:', error);
+    res.status(500).json({ success: false, error: 'Internal Server Error' });
+  }
+});
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
