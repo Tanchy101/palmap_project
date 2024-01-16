@@ -3,9 +3,12 @@ import './App.css';
 import Home from './dashboard/Home';
 import Signup from './signup/Index';
 import Info from './info/infoPage';
-
+import ForgotPass from './change-pass/EnterEmail';
+import Check from './change-pass/Check';
 import Profile from './myProfile/myProfile';
 import AboutUs from './aboutUs/aboutUs';
+import PasswordUpdate from './change-pass/PasswordUpdate'
+import UpdateSuccess from './change-pass/UpdateSuccess'
 
 import Gazebo1 from './gazebo/gazebo1';
 import Gazebo2 from './gazebo/gazebo2';
@@ -47,7 +50,10 @@ const router =createBrowserRouter(
       <Route path = "signup" element={<Signup />}></Route>
       <Route path = "login" element={<Home />}></Route>
       <Route path = "info" element={<Info />}></Route>
-      <Route path = "forgotpass" element={<Info />}></Route>
+      <Route path = "forgotpass" element={<ForgotPass />}></Route>
+      <Route path = "check" element={<Check />}></Route>
+      <Route path = "reset-password" element={<PasswordUpdate />}></Route>
+      <Route path = "update-success" element={<UpdateSuccess />}></Route>
       <Route path = "map" element={<MapWithGeolocation />}></Route>
       <Route path = "myProfile" element={<Profile />}></Route> 
       <Route path = "aboutus" element={<AboutUs />}></Route> 
