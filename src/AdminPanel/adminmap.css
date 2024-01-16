@@ -1,0 +1,11 @@
+.adm-mapcontainer{
+    height: 70vh;
+    width: 100vh;
+
+}
+.html-admin{
+    display: flex;
+    background-color: maroon;
+    background-size: cover;
+    height: 100vh;
+}
