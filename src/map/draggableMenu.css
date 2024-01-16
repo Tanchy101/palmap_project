@@ -21,10 +21,15 @@
     text-align: center;
     padding-top: 1.5em;
 }
-
+.buttonsInSearch{
+  width: 70%;
+  border-radius: 25px;
+  margin-top: 1.5vh;
+  height: 5vh;
+}
 .scroll-container{
   overflow-y: auto;
-  height: 30vh;
+  height: 38vh;
 }
 
 h4{
