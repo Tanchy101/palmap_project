@@ -1,4 +1,4 @@
-
+import HomeAboutUs from './HomeAboutUs'
 import './aboutUs.css';
 import mel from './mel.png'
 import cj from './cj.png'
@@ -12,6 +12,7 @@ const aboutUs = () =>  {
   return (
     <>
     <div className="info">
+    <HomeAboutUs />
         <div className="palmap-about">
             PaLMap
         </div>

@@ -126,6 +126,35 @@ i{
     padding-right: 10px;
     cursor:pointer;
 }
+.HomeBtnAbout {
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+    flex-direction: row;
+    display: flex;
+    margin-top: 10px;
+    position: absolute;
+}
+.HomeBtnAbout:hover {
+    font-family: 'Poppins';
+    font-weight: bold;
+    text-decoration: none;
+    color: maroon;
+    flex-direction: row;
+    display: flex;
+    margin-top: 10px;
+}
+.house-icon {
+    margin-top: 4px;
+    margin-right: 5px;
+    margin-left: 9px;
+}
+.home-btn{
+    flex-direction: row;
+    display: flex;
+}
 @media only screen and (max-width:768px) {
     .pics{
         background-color: maroon;
