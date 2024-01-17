@@ -7,7 +7,7 @@ import GuestInfoPage from './info/guestInfopage';
 import ForgotPass from './change-pass/EnterEmail';
 import Check from './change-pass/Check';
 import Profile from './myProfile/myProfile';
-import AboutUs from './aboutUs/aboutUsguest';
+import AboutUs from './aboutUs/aboutUs';
 import AboutUsGuest from './aboutUs/aboutUsguest';
 import PasswordUpdate from './change-pass/PasswordUpdate'
 import UpdateSuccess from './change-pass/UpdateSuccess'

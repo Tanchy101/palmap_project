@@ -2,7 +2,6 @@ import React from 'react';
 import './gazebo.css'
 import { MdPerson } from "react-icons/md";
 import { MdArrowBackIos } from "react-icons/md";
-import { MdArrowForwardIos } from "react-icons/md";
 import { Switch } from "antd"
 import {Link} from 'react-router-dom';
 

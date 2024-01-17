@@ -17,7 +17,7 @@ const Home = () => {
                                 
                                  <div className = "card">
                                     <p className = "forgot-valid">Kindly check your email and click the verification code to change your password </p>
-                                    <a href="https://mail.google.com" target="_blank" rel="noreferrer" className="email-link"><button className="forgot-submit">Check Email</button></a>
+                                    <a href="https://outlook.com" target="_blank" rel="noreferrer" className="email-link"><button className="forgot-submit">Check Email</button></a>
                                     <p><Link to ="/login" className = "signup-link">Back to Login</Link></p>
                                 </div>
                         </div>

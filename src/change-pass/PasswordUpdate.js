@@ -47,7 +47,7 @@ const Home = () => {
     }
 
     try {
-        const userEmail = 'rimuelcanada@gmail.com';
+        const userEmail = 'actancioco2021@plm.edu.ph';
             const response = await axios.post('/api/update-password', {
                 email: userEmail,
                 newPassword,
